@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>document - getElementById</title>
+</head>
+<body>
+        first Input : <input type="text" id="first"><br>
+        second Input : <input type="text" id="second"><br>
+        <button onclick="check()">Submit</button>
+    
+        <script>
+            function check (){
+                var first = document.getElementById('first').value;
+                var second = document.getElementById('second').value;
+    
+    
+                if(first == second){
+                    document.write('correct');
+                }else{
+                    document.write('incorrect');
+                }
+            } 
+        </script>
+</body>
+</html>
