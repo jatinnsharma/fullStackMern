@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Odd Even</title>
+</head>
+<body>
+    Number : <input type="text" id="number">
+    <button onclick="check()">Submit</button>
+
+    <!-- <h2 id="ans"></h2> -->
+    <script>
+
+        function check(){
+            var number = parseInt(document.getElementById('number').value)
+            if(number % 2==0){
+                document.write('even')
+                // var ans = 'even'
+                // document.getElementById('ans').value = ans
+                
+            }else{
+                document.write('odd')
+                // var ans = 'even'
+                // document.getElementById('ans').value = ans
+            }
+
+        }
+
+    </script>
+
+</body>
+</html>
