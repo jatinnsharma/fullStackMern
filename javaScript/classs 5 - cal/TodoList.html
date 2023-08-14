@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo - list </title>
+</head>
+<body>
+
+    Enter your name : <input type="text" id="name">
+    <button onclick="added()">Add</button>
+
+    <ul id="text">
+        <li></li>
+    </ul>
+    <script>
+        function added(){
+            var name = document.getElementById('name').value        
+            var li = document.createElement('li');  
+            li.appendChild(name)
+            
+            let ul = document.getElementsByTagName('ul')[0];
+            let li = document.createElement('li')
+            ul.appendChild(li).value = 
+        }
+    </script>
+</body>
+</html>
+
+
