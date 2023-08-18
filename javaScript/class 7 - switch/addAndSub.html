@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const number1 = prompt('Enter number 1')
+        const number2 = prompt('Enter number 2')
+        const cal = prompt('what you want to do add , sub , div etc')
+
+        const num1 = parseInt(number1)
+        const num2 = parseInt(number2)
+        switch(cal){
+            case 'add' : 
+                console.log(num1+num2);
+                break;
+            case 'sub' : 
+                console.log(num1-num2);
+                break;
+            case 'mul' : 
+                console.log(num1*num2);
+                break;
+            case 'div' : 
+                console.log(num1/num2);
+                break;
+            default:
+                console.log('invalid');
+
+        }
+    </script>
+</body>
+</html>
