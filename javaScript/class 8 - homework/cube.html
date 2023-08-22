@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cube</title>
+</head>
+<body>
+
+    <input type="text" id="star">
+    <button onclick="star()">Submit</button>
+    <script>
+
+        function star(){
+            var num = document.getElementById('star').value;
+
+            for(let i = 0; i<num;i++){
+                for(let j = 0;j<num;j++){
+                    document.write('* ');
+                }
+                document.write("<br>");
+            }
+
+
+        }
+            // for(var i = 0;i<=10;i++){
+            //     console.log('Cube of '  + i  + ' is : ' + i*i*i  );
+            // }
+
+
+
+
+            
+    </script>
+</body>
+</html>
