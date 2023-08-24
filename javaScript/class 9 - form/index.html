@@ -90,6 +90,12 @@ function validation(){
         return false;
     }
     
+    if((email.charAt(email.length-4)!='.') && (email.charAt(email.length-3)!='.') ){
+        document.getElementById('emailIdAlert').innerHTML=".invalid position";
+        return false;
+    }
+
+
     if(phoneNumber == ""){
         document.getElementById('phoneNumberAlert').innerHTML="Please write your mobile no.";
         return false;
