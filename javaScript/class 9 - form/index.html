@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+</head>
+<body>
+    
+
+    <form name="myForm" onsubmit=" return validation()" >
+
+        User Name : <input type="text" id="username" placeholder="Enter your username" autocomplete="off">
+        <span id="usernameAlert" style="color: red;"></span> 
+    
+        <br><br>
+        Password : <input type="password" id="password" placeholder="Enter your password" autocomplete="off">
+        <span id="passwordAlert" style="color: red;"></span> 
+    
+        <br><br>
+        Confirm Password : <input type="password" id="confirmPassword" placeholder="Enter confirm password" autocomplete="off">
+        <span id="confirmPasswordAlert" style="color: red;"></span>  
+
+        <br><br>
+        Email Id : <input type="email" id="emailId" placeholder="Enter your email" autocomplete="off">
+        <span id="emailIdAlert" style="color: red;"></span> 
+        
+        <br><br>
+        Phone Number : <input type="mobile" id="phoneNumber" placeholder="Enter phone number" autocomplete="off">
+        <span id="phoneNumberAlert" style="color: red;"></span> 
+        
+        <br><br>
+        <input type="submit" id="sumbit" >
+
+
+    </form>
+
+
+<script>
+function validation(){
+    let username = document.getElementById('username').value;
+    let password = document.getElementById('password').value;
+    let confirmPassword = document.getElementById('confirmPassword').value;
+    let email = document.getElementById('emailId').value;
+    let phoneNumber = document.getElementById('phoneNumber').value;
+    let usernameAlert = document.getElementById('usernameAlert').innerHTML="";
+    let passwordAlert = document.getElementById('passwordAlert').innerHTML="";
+    let confirmPasswordAlert = document.getElementById('confirmPasswordAlert').innerHTML="";
+    let phoneNumberAlert = document.getElementById('phoneNumberAlert').innerHTML="";
+
+
+    if(username == ""){
+        document.getElementById('usernameAlert').innerHTML="please fill the user name";
+        return false;
+    }
+    if(username.length <= 5 || username.length>20){
+        document.getElementById('usernameAlert').innerHTML="**username length must be between 5 to 20";
+        return false;
+    }
+    if(!isNaN(username)){
+        document.getElementById('usernameAlert').innerHTML="**only characters are allowed";
+        return false;
+    }
+
+    if(password==""){
+        document.getElementById('passwordAlert').innerHTML="**please write your password";
+        return false;
+    }
+    if(password.length<=5 || password.length>20){
+        document.getElementById('passwordAlert').innerHTML="**username length must be between 5 to 20";
+        return false;
+    }
+
+    if(confirmPassword==""){
+        document.getElementById('confirmPasswordAlert').innerHTML="**please write confirm field";
+        return false;
+    }
+    if(password != confirmPassword){
+        document.getElementById('confirmPasswordAlert').innerHTML="password is not matching";
+        return false;
+    }
+
+    if(email == ""){
+        document.getElementById('emailIdAlert').innerHTML="password write your email";
+        return false;
+    }
+
+    if(email.indexOf('@')<=0){
+        document.getElementById('emailIdAlert').innerHTML="@ invalid position";
+        return false;
+    }
+    
+    if(phoneNumber == ""){
+        document.getElementById('phoneNumberAlert').innerHTML="Please write your mobile no.";
+        return false;
+    }
+    if(isNaN(phoneNumber)){
+        document.getElementById('phoneNumberAlert').innerHTML="user must write digits only";
+        return false;
+    }
+    if(phoneNumber.length!=10){
+        document.getElementById('phoneNumberAlert').innerHTML="Mobile no. must be 10 digits only";
+        return false;
+    }
+    
+}
+</script>
+
+
+
+</body>
+</html>
