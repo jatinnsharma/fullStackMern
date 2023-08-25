@@ -4,36 +4,43 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Form</title>
+      <script src="https://cdn.tailwindcss.com"></script>
+
 </head>
-<body>
-    
+<body class="bg-gradient-to-r from-sky-400 to-indigo-400">
 
-    <form name="myForm" onsubmit=" return validation()" >
-
-        User Name : <input type="text" id="username" placeholder="Enter your username" autocomplete="off">
-        <span id="usernameAlert" style="color: red;"></span> 
+    <center>
+        <h1 class="text-4xl my-10 font-semibold text-blue-900">Create an account</h1>
+        <form class="bg-white w-2/5 rounded-lg h-2/3 py-10" name="myForm" onsubmit=" return validation()" >
     
-        <br><br>
-        Password : <input type="password" id="password" placeholder="Enter your password" autocomplete="off">
-        <span id="passwordAlert" style="color: red;"></span> 
-    
-        <br><br>
-        Confirm Password : <input type="password" id="confirmPassword" placeholder="Enter confirm password" autocomplete="off">
-        <span id="confirmPasswordAlert" style="color: red;"></span>  
-
-        <br><br>
-        Email Id : <input type="email" id="emailId" placeholder="Enter your email" autocomplete="off">
-        <span id="emailIdAlert" style="color: red;"></span> 
+            User Name : <input type="text" id="username" placeholder="Enter your username" autocomplete="off">
+            <span id="usernameAlert" style="color: red;"></span> 
         
-        <br><br>
-        Phone Number : <input type="mobile" id="phoneNumber" placeholder="Enter phone number" autocomplete="off">
-        <span id="phoneNumberAlert" style="color: red;"></span> 
+            <br><br>
+            Password : <input type="password" id="password" placeholder="Enter your password" autocomplete="off">
+            <span id="passwordAlert" style="color: red;"></span> 
         
-        <br><br>
-        <input type="submit" id="sumbit" >
+            <br><br>
+            Confirm Password : <input type="password" id="confirmPassword" placeholder="Enter confirm password" autocomplete="off">
+            <span id="confirmPasswordAlert" style="color: red;"></span>  
+    
+            <br><br>
+            Email Id : <input type="email" id="emailId" placeholder="Enter your email" autocomplete="off">
+            <span id="emailIdAlert" style="color: red;"></span> 
+            
+            <br><br>
+            Phone Number : <input type="mobile" id="phoneNumber" placeholder="Enter phone number" autocomplete="off">
+            <span id="phoneNumberAlert" style="color: red;"></span> 
+            
+            <br><br>
+            <input class="bg-indigo-300 text-white text-bold p-1 w-2/5 rounded-sm" type="submit" id="sumbit" >
+    
+            <p class="py-3">Already have an account ?? <span class="text-blue-500">Sign Here </span></p>
+        </form>
+
+    </center>
 
 
-    </form>
 
 
 <script>
@@ -82,7 +89,7 @@ function validation(){
 
     if(email == ""){
         document.getElementById('emailIdAlert').innerHTML="password write your email";
-        return false;
+        return false; 
     }
 
     if(email.indexOf('@')<=0){
