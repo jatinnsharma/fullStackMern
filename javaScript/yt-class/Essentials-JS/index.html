@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const person={
+            fName:'Jatin',
+            'last Name' : 'Sharma',
+            age:'21',
+            hobbies:['coding','blogging','youtubing'],
+            address:{
+                home:'78',
+                city:'Karnal',
+                'state':'haryana',
+            }
+        }
+
+        console.log(person.fName);
+        console.log(person['last Name']);
+        console.log(person['age']);
+        console.log(person.hobbies[2]);
+        console.log(person.address.city);
+        console.log(Object.keys(person));
+        console.log(Object.values(person));
+    </script>
+</body>
+</html>
