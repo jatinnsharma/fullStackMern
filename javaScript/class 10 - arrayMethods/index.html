@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+
+
+
+// Online Javascript Editor for free
+// Write, Edit and Run your Javascript code using JS Online Compiler
+
+console.log("Welcome to Programiz!");
+
+let a = [1,2,3,4,5,];
+let a1 = ['Jatin','Zia'];
+
+// console.log(a.length)
+
+// console.log(a1[1]);
+
+
+a1.push('rahul');
+console.log(a1)
+// a1.pop();
+// console.log(a1.length)
+
+
+
+
+// let fruits = ["Apple", "Orange", "Plum"];
+// for(let i = 0;i<fruits.length;i++){
+//     console.log(fruits[i])
+// }
+
+
+
+
+
+fruits.forEach((i)=>{console.log(i)});
+
+      const fruits = ["Banana", "Orange", "Apple", "Mango"];
+      fruits.sort();
+      console.log(fruits);
+      fruits.reverse();
+      console.log(fruits);
+
+      const array = [1, 2, 10, 5, 6];
+      array.sort();
+      console.log(array);
+      array.reverse();
+      console.log(array);
+
+      array.forEach((e) => {
+        console.log(e);
+      });
+
+      // filter()
+    let filterArray = [5,10,20,30,40,50];
+
+    let filterArr = filterArray.filter(function(value,index){
+        return value>10
+    })
+    console.log(filterArr);
+
+    //forEach
+    let forEachArray = [10,20,30];
+    forEachArray.forEach(function(value,index){
+        console.log(value,index);
+    })
+
+
+
+    //map method
+    var mapArray = [2,3,4];
+    var mapArr = mapArray.map(function(value,index){
+        return value*2
+    })
+
+    console.log(mapArr)
+
+
+    </script>
+  </body>
+</html>
