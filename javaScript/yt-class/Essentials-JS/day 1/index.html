@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+</head>
+<body>
+    <script>
+        // Array of object 
+        const lang =[
+            {id:1,name:'Jatin',year:2001},
+            {id:2,name:'Jass',year:2002},
+            {id:3,name:'Rahul',year:2003},
+            {id:4,name:'Priya',year:2004},
+    ]
+    for(let i =0;i<lang.length;i++){
+        console.log(lang[i].name);
+    }
+    // for of loop
+    for(l of lang){
+        console.log(l.year);
+    }
+
+
+    // simple if else
+    const z = 10;
+    // let color;
+    // if(z>10){
+    //     color = 'red';
+    // }else{
+    //     color = 'blue';
+    // }
+    // console.log(color);
+
+    // Ternary operator
+    const color2 = z>10?'red':'blue';
+    console.log(color2)
+
+    </script>
+</body>
+</html>

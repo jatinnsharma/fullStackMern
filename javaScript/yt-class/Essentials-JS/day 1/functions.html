@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <Script>
+        //Functions
+
+        //Method#1 - Function decleration
+        function addNums(num1,num2){
+            console.log(num1+num2);
+        }
+        addNums(20,30);
+
+        // Method#2 - Function expression
+        const mulNums=function(num1,num2){
+            return num1*num2;
+        }
+        console.log(mulNums(20,30));
+
+        //Method#3 - Arrow Function
+        const modNums = (num1,num2)=>{
+            return num1%num2;
+        }
+        console.log(modNums(20,30));
+
+        //Method#4 - Condensed Arrow Function
+        const divNums1 = (num1,num2)=>num1/num2;
+        const divNums2 = num1=>num1/2;
+        console.log(divNums1(10,2));
+        console.log(divNums2(10));
+
+    </Script>
+</body>
+</html>
