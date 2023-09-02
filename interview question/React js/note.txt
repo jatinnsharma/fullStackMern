@@ -1,0 +1,53 @@
+What is React js or React ? 
+----------------------------
+- It is a JavaScript library for building UI.
+- React is not a framework 
+
+
+Why react?
+
+
+FAQ : What are the challenges in modern web development?
+Ans:
+    - Web started in early 1990's - Tim Berners Lee
+    - Current Generation : 90% users are using web with smart devices.
+    - Traditional web applications have issues with modern devices
+
+    1. Unified UX
+        - Application must have some experience across all devices.
+        - Mobile users must get access to everything. 
+
+    2. Fluid UX 
+        - User stays on one page and can get access to everything on to the page.
+        
+    3. Loosely coupled and extensible 
+        - You can build features remotely
+        - Push the new features into existing app without having 
+          catastrophic failures.
+
+    4. Simplified deployment
+
+
+FAQ : What is solution?
+Ans : Better build 
+        SPA[Single Page Application] or 
+        PWA [Progressive Web Applications] for example : photopea
+        app like experience in web browser.
+
+FAQ: How to build SPA & PWA?
+ANS: 
+    HTML,CSS,JS,JQuery => SPA => Yes
+    Issues with JS & JQ
+    - Lot of coding 
+    - Heavy 
+    - Uses lot of DOM manipulations
+    - More memory
+    - Legacy : load everthing 
+
+    Modern => Angular,React,Vue,knockoutJS,Backbone,Ember etc.
+
+FAQ: What is difference between Angular and React?
+Ans: 
+    - Angular is a framework
+    - React is a Library
+
