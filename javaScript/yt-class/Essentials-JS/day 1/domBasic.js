@@ -13,5 +13,5 @@ const colItems = document.getElementsByClassName('.item');
 // modeItems.forEach(items => console.log(items))
 // colItems.forEach(items => console.log(items))
 for(let i = 0;i<colItems.length;i++){
-    console.log(colItems[i]);
+    console.log(colItems[i]); 
 }
