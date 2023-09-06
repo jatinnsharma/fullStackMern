@@ -1,0 +1,98 @@
+Features of React 
+------------------
+
+1.What is virtual DOM.
+Ans: In order to learn virtual Dom , you have to know about DOM First.
+
+
+Q1.What is DOM.
+       HTML 
+        |
+    <p>Welcome</p>
+        |
+    Bytes 0011101
+        |
+      Chars <
+            p
+            >
+        |
+      Token (Tag) <a></a>
+        |
+      Node(Element) anchor
+        |
+      Parent
+        |               ----> DOM ---> Layout ---> Render
+    -------------
+    child   child 
+
+Markup -> Bytes -> Chars -> Token -> Node -> Dom -> Layout -> Render -> Paint
+
+Thats mean what ever you write in HTML
+                                 -----
+that will translate into bytes.
+The byte are translate into characters.
+Characters are grouped and formed into Token.
+Token are translate into nodes.
+Nodes are ampended into Hierarchy order 
+That Hierarchy order is known as DOM(documentobject model)
+After this DOM is convert into layout. 
+A layout decided which content where to be place.
+Thats mean headers go on top footer goes into last 
+and section goes into center
+This layout under goes a process known as Rendering.
+Render is the process of generated output.
+Thats mean final output is ready to present into browers 
+This presented into browers is known as painting.
+This is the final stage happned.
+and the result of paiting you will see on browser as welcome on the browser.
+
+
+Note: Hierarchy presention is known as DOM
+HTML present the dom 
+javascript manipulate the dom 
+in the simple word html present the button and javascript make 
+that button working 
+HTML is static dom and js make that dynamic
+
+
+
+
+<style>
+p{
+    color: red;         ---> that is manage by CSSOM
+}
+</style>
+
+<p>Welcome</p>          ----> that is manage by DOM
+
+
+
+
+
+Q2. What is shadow DOM?
+Ans: It is an hierarchy configured for every component in HTML.  
+- Shadow DOM comprises of 
+    a) Markup       <html></html>
+    b) Styles       CSS
+    c) Logic        JavaScript
+
+
+Q3. What is Virtual DOM?
+-It is a copy of actual DOM in memory.
+-Update are first appended into virtual DOM and then into actual DOM.
+-Faster in rendering output.
+ 
+
+
+2=> Component bases
+    Reusability,Maintainability,Testability,Loosely Coupled 
+
+3=> Modular 
+    Legacy
+    Modular 
+
+
+4=> AOT Technique
+    React js and Angular is ahead of time Technique
+    JavaScript is JIT(just in time) Technique 
+    JavaScript  

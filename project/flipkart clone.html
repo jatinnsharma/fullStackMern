@@ -10,7 +10,7 @@
       crossorigin="anonymous"
     />
 
-    <link rel="stylesheet" href="style.css" />
+    <!-- <link rel="stylesheet" href="style.css" /> -->
     <link href="css/bootstrap.min.css" rel="stylesheet" media="screen" />
 
     <style>
@@ -147,131 +147,9 @@
     </div>
 
     <!--Cards  -->
-    <div class="d-flex flex-wrap">
-      <div class="card card-spacing" style="width: 18rem">
-        <img
-          class="card-img-top card-img mx-auto"
-          src="https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg"
-          alt="Card image cap"
-        />
-        <div class="card-body">
-          <h5 class="card-title">Fjallraven - Foldsack No. 1 Backpack</h5>
-          <p class="card-text">
-            Your perfect pack for everyday use and walks in the forest.
-          </p>
-          <a href="#" class="btn btn-primary">Shop Now</a>
-        </div>
-      </div>
-
-      <div class="card card-spacing" style="width: 18rem">
-        <img
-          class="card-img-top card-img mx-auto"
-          src="https://fakestoreapi.com/img/71-3HjGNDUL._AC_SY879._SX._UX._SY._UY_.jpg"
-          alt="Card image cap"
-        />
-        <div class="card-body">
-          <h5 class="card-title">Mens Casual Premium Slim Fit T-Shirts</h5>
-          <p class="card-text">
-            Slim-fitting style, contrast raglan long sleeve
-          </p>
-          <a href="#" class="btn btn-primary">Show Now</a>
-        </div>
-      </div>
-
-      <div class="card card-spacing" style="width: 18rem">
-        <img
-          class="card-img-top card-img mx-auto"
-          src="https://fakestoreapi.com/img/71li-ujtlUL._AC_UX679_.jpg"
-          alt="Card image cap"
-        />
-        <div class="card-body">
-          <h5 class="card-title">Mens Cotton Jacket</h5>
-          <p class="card-text">
-            great outerwear jackets for Spring/Autumn/Winter
-          </p>
-          <a href="#" class="btn btn-primary">Shop Now</a>
-        </div>
-      </div>
-
-      <div class="card card-spacing" style="width: 18rem">
-        <img
-          class="card-img-top card-img mx-auto"
-          src="https://fakestoreapi.com/img/71YXzeOuslL._AC_UY879_.jpg"
-          alt="Card image cap"
-        />
-        <div class="card-body">
-          <h5 class="card-title">Mens Casual Slim Fit</h5>
-          <p class="card-text">
-            The color could be slightly different between on the screen and in
-            practice.
-          </p>
-          <a href="#" class="btn btn-primary">Shop Now</a>
-        </div>
-      </div>
-
-      <div class="card card-spacing" style="width: 18rem">
-        <img
-          class="card-img-top card-img mx-auto"
-          src="https://fakestoreapi.com/img/71pWzhdJNwL._AC_UL640_QL65_ML3_.jpg"
-          alt="Card image cap"
-        />
-        <div class="card-body">
-          <h5 class="card-title">Chain Bracelet</h5>
-          <p class="card-text">
-            Wear facing inward to be bestowed with love and abundance, or
-            outward for protection.
-          </p>
-          <a href="#" class="btn btn-primary">Shop Now</a>
-        </div>
-      </div>
-
-      <div class="card card-spacing" style="width: 18rem">
-        <img
-          class="card-img-top card-img mx-auto"
-          src="https://fakestoreapi.com/img/61sbMiUnoGL._AC_UL640_QL65_ML3_.jpg"
-          alt="Card image cap"
-        />
-        <div class="card-body">
-          <h5 class="card-title">Solid Gold Petite Micropave</h5>
-          <p class="card-text">
-            Satisfaction Guaranteed. Return or exchange any order within 30
-            days.Designed
-          </p>
-          <a href="#" class="btn btn-primary">Shop Now</a>
-        </div>
-      </div>
-
-      <div class="card card-spacing" style="width: 18rem">
-        <img
-          class="card-img-top card-img mx-auto"
-          src="https://fakestoreapi.com/img/71YAIFU48IL._AC_UL640_QL65_ML3_.jpg"
-          alt="Card image cap"
-        />
-        <div class="card-body">
-          <h5 class="card-title">White Gold Plated Princess</h5>
-          <p class="card-text">
-            Classic Created Wedding Engagement Solitaire Diamond Promise Ring
-            for Her.
-          </p>
-          <a href="#" class="btn btn-primary">Shop Now</a>
-        </div>
-      </div>
-
-      <div class="card card-spacing" style="width: 18rem">
-        <img
-          class="card-img-top card-img mx-auto"
-          src="https://fakestoreapi.com/img/51UDEzMJVpL._AC_UL640_QL65_ML3_.jpg"
-          alt="Card image cap"
-        />
-        <div class="card-body">
-          <h5 class="card-title">Pierced Owl Rose Gold Plated</h5>
-          <p class="card-text">
-            Rose Gold Plated Double Flared Tunnel Plug Earrings. Made of 316L
-            Stainless Steel
-          </p>
-          <a href="#" class="btn btn-primary">Shop Now</a>
-        </div>
-      </div>
+    <div class="d-flex flex-wrap " id="cart">
+      
+    
     </div>
 
     <!-- Contact With map -->
@@ -431,6 +309,49 @@
     </footer>
     <!-- Footer -->
 
+
+
+<script>
+  fetch('https://fakestoreapi.com/products')
+  .then((data)=> {
+    return data.json()
+  })
+  .then((completeData)=>{
+    let printData = "";
+    completeData.map((value)=>{
+      printData+=`<div class="card card-spacing" style="width: 18rem">
+        <img
+          class="card-img-top card-img mx-auto"
+          src=${value.image}
+          alt="Card image cap"
+        />
+        <div class="card-body">
+          <h5 class="card-title">${value.title}</h5>
+          <p class="card-text">
+            ${value.category}
+          </p>
+          <p class="card-text">
+            Rs : ${value.price}
+          </p>
+          <p class="card-text">
+            
+          </p>
+          <a href="#" class="btn btn-primary">Shop Now</a>
+        </div>
+      </div>`;
+    });
+    document.getElementById('cart').innerHTML = printData;
+  })
+  .catch((err)=>{
+    console.log(err);
+  })
+</script>
+
+
+
+
+
+
     <!-- Bootstrap Css -->
     <script
       src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
@@ -449,6 +370,6 @@
       integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
       crossorigin="anonymous"
     ></script>
-    <!-- Bootstrap -->
+    
   </body>
 </html>
