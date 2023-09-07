@@ -26,18 +26,19 @@
       height: 25vw;
       width: 45vh;
     }
+      
   </style>
 
 </head>
 <body>
-<center>Search : <input type="text" id="search-bar" placeholder="Search for pizza" onkeyup="searchPizza()"></center>
+<center>Search : <input type="text" id="search-bar" placeholder="Search for Shoes" onkeyup="searchFunction()"></center>
 
     <div id="root" class="d-flex flex-wrap">
 
     </div>
 
     <script>
-        fetch('./data.js')
+        fetch('./data.json')
         .then((data)=>{return data.json()})
         .then((completeData)=>
         {
@@ -50,9 +51,9 @@
           alt="image"
         />
         <div class="card-body">
-          <h5 class="card-title">${value.name}</h5>
+          <h5 class="card-title" id="productName">${value.name}</h5>
           <p class="card-text">
-            ${value.ingredients}
+            ${value.description.substring(0,36)}
           </p>
           <p class="card-text">
             $${value.price}
@@ -73,11 +74,12 @@
 
 
 
-  // search bar 
-  const searchPizza = ()=>{
-    let filter = document.getElementById('search-bar').value.toUpperCase()
-    let 
-  }
+    // search bar 
+    const searchFunction = ()=>{
+      let filter = document.getElementById('search-bar').value.toUpperCase()
+      let productName = document.getElementById('productName');
+
+    }
 
     </script>
 
