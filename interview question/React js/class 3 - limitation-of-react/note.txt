@@ -1,0 +1,6 @@
+What are the issues with React?
+- React is not designed for your requirements hence lot of GAP's.
+- To fill the GAP's you have to depend on lot of 3rd parties.
+- SEO issues.
+- Pace of development.
+- Poor documentation. 

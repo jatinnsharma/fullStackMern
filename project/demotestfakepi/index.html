@@ -1,0 +1,44 @@
+<html>
+<head>
+<title>API</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+<style>
+#card{
+        display:flex;
+        flex-wrap:wrap;
+}
+</style>
+</head>
+<body>
+ <center>
+<div id="card">
+        </div>
+
+ </center>  
+<script>
+
+fetch("https://fakestoreapi.com/products")
+.then((data)=>{return data.json()})
+.then((completedata)=>{
+let data1="";
+completedata.map((values)=>{
+data1 +=`<div class="card"style="width:500px;">
+      <h1 class="title">${values.title}</h1>
+      <img src=${values.image} alt="...">
+      <div>
+        <p>${values.description}</p>
+        <p>${values.category}</p>
+        <p>${values.price}</p>
+        </div>
+        </div>`;
+});
+  document.getElementById("card").innerHTML=data1;
+})
+.catch((err)=>{
+        console.log(err);
+
+});
+
+</script>
+</body>
+</html>

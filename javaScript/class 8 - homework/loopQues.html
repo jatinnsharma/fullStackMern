@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    //Ques 1 
+    document.write('Ques1: input:3 and expected output : XY12XY34XY56'+'<br>')
+    document.write('output'+'<br>')
+
+    let j = 1;
+    for(let i=1;i<=3;i++){
+        document.write('XY'+j+(j+1));
+        j+=2;
+    }
+
+
+    //Ques 2
+    document.write('<br><br>'+'Ques2: input n=4 and expected output : 1@2@@3@@@4@@@@'+'<br>')
+    document.write('output'+'<br>')
+
+    for(let i=1;i<=4;i++){
+        document.write(i+'@'.repeat(i));
+    }
+    
+
+    //Ques 3 
+    document.write('<br><br>'+'Ques3: input n=3 and expected output :M+MM+MMM+'+'<br>')
+    document.write('output:'+'<br>')
+
+    for(let i=0;i<3;i++){
+        document.write('M'+'M'.repeat(i)+'+');
+    }
+
+
+    //Ques 4
+    document.write('<br><br>'+'Ques4: input n=3 and expected output :3 6 9'+'<br>')
+    document.write('output:'+'<br>')
+
+    for(let i = 1; i<=3;i++){
+            document.write(i*3+'<br>');
+    }
+    
+
+    //Ques 5 
+    document.write('<br><br>'+'Ques5: input n=3 and expected output :1 4 7'+'<br>')
+    document.write('output'+'<br>')
+
+    let a = 1;
+    for(let i = 1;i<=3;i++){
+        document.write(a+'<br>');
+        a+=3
+    }
+
+    //Ques 6 
+    document.write('<br><br>'+'Ques6: input n=3 and expected output :3 2 1'+'<br>')
+    document.write('output'+'<br>')
+
+    for(let i = 3; i>=1;i--){
+        document.write(i+' ');
+    }
+
+
+    //Ques 7 
+    document.write('<br><br>'+'Ques7: input n=3 and expected output :3 2 1'+'<br>')
+    document.write('output'+'<br>')
+
+    for(let i = 3; i>=1;i--){
+        document.write(i+'<br>');
+    }
+
+    </script>
+</body>
+</html>
