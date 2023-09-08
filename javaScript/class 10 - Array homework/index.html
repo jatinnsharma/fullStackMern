@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Ques</title>
+</head>
+<body>
+    <script>
+        // Ques 1 :
+        document.write(' Given an array, print the sum of the numbers in	the	array <br>')
+        let a1 = [1,-1,-13];
+        let sum1 =0;
+        for(let i = 0;i<a1.length;i++){
+            sum1=sum1+a1[i];
+        }
+        document.write(sum1);
+
+
+        //Ques 2 :
+        document.write('<br><br> Given an array, print the sum and count of	the	multiples of 3	in	the	array <br>')
+        let a = [1,2,3,4,5,6,7,8,9,10];
+        let sum = 0, count=0;
+        for(let i=0;i<a.length;i++){
+            if(a[i]%3==0){
+                sum=sum+a[i];
+                count++;
+            }
+        }
+        document.write('Sum is :'+sum)
+        document.write(' Count is :'+count)
+
+
+        // Ques 3 :
+        document.write('<br><br> Given	an	array,	print the	sum	of	the	even and	odd	numbers	in	the	array. <br>')
+        let a3 = [1,2,3,4,5,6,7,8,9,10];
+        let sumEven = 0, sumOdd=0;
+        for(let i=0;i<a.length;i++){
+            if(a[i]%2==0){
+                sumEven=sumEven+a[i];
+            }else{
+                sumOdd = sumOdd+a[i];
+            }
+        }
+        document.write('Sum of even :'+sumEven)
+        document.write(' Sum of odd '+sumOdd)
+
+
+        //Ques 4 :
+        document.write('<br><br> Given	an	array,	print the count	and	the	numbers	greater	than 21 in	the	array<br>')
+        let a4 = [5,18,26,30,40,6];
+        let values = 0,count4=0;
+        document.write('values :');
+        for(let i=0;i<a4.length;i++){
+            if(a4[i]>21){
+                document.write(a4[i]+' ');
+                count4++;
+            }
+        }
+        document.write('count is :'+count4)
+
+
+        //Ques 5 :
+        document.write('<br><br> Given	an	array,	add	10	to	all	the	elements	in	the	array<br>')
+        let a5 =[2,3,5,7];
+        for(let i=0;i<a5.length;i++){
+            document.write(a5[i]+10+" ")
+        }
+
+    </script>
+</body>
+</html>

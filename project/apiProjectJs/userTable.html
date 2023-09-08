@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      th,
+      td {
+        padding: 30px;
+        text-align: left;
+        border: 1px solid #ddd;
+      }
+      th {
+        background-color: #000000;
+        color: white;
+      }
+      tr:hover {
+        background-color: rgb(107, 170, 234);
+      }
+    </style>
+  </head>
+  <body>
+    <div id="user"></div>
+
+    <table id="table">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>Email</th>
+          <th>User Name</th>
+          <th>Password</th>
+          <th>Phone Number</th>
+          <th>City</th>
+          <th>Street</th>
+          <th>Zip Code</th>
+        </tr>
+      </thead>
+
+      <tbody id="userData"></tbody>
+    </table>
+
+    <script>
+      fetch("https://fakestoreapi.com/users")
+        .then((res) => {
+          return res.json();
+        })
+        .then((completeData) => {
+          let data = "";
+          completeData.map((values) => {
+            data += `
+                    <tr>
+                    <td>${values.id}</td>
+                    <td>${values.name.firstname}</td>
+                    <td>${values.name.lastname}</td>
+                    <td>${values.email}</td>
+                    <td>${values.username}</td>
+                    <td>${values.password}</td>
+                    <td>${values.phone}</td>
+                    <td>${values.address.city}</td>
+                    <td>${values.address.street}</td>
+                    <td>${values.address.zipcode}</td>
+                    </tr>    
+                `;
+          });
+          document.getElementById("userData").innerHTML = data;
+        })
+        .catch((err) => console.log(err));
+    </script>
+  </body>
+</html>
