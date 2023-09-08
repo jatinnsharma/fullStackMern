@@ -1,0 +1,176 @@
+JavaScript Basics
+------------------
+1.Variables
+2.Data Types
+3.Operators
+4.Statements 
+5.Functions
+
+Variables
+----------
+- Storage locations in memory where you can store a value and use it as a part of any expression
+- JavaScript variables are declared by using 
+    a) var 
+    b) let 
+    c) const 
+
+Syntax:
+        var variableName;
+
+var 
+- It defines a function scope variable.
+- You can declare in any block and access from any another block.
+- var allows declaring,initialization and assignment.
+    var x; => declaring
+    x=10; => assignment
+    var x = 10; => initialization
+
+- var allows shadowing
+    {
+        var y = 10;
+        var y = 20;  
+    }
+- var allows hoisting.
+    x = 10;
+    console.log("x ="+x);
+    var x;
+
+--------------------------------------------------
+
+let: 
+- It is used to define block scope variable.
+- block scope variable is accessible to its inner blocks.
+
+let x;
+x = 10;
+if(x==10){
+    let y = 20;
+    console.log(`x = ${x}  y = ${y}`) 
+}
+    console.log(`x = ${x}  y = ${y}`)  // error
+ 
+
+- let allows declaring , assignment and initialization.
+- let is look for the name it is not going to look for which keyword you used.
+    var y = 10;
+    let y =  10; //error 
+
+    it give error becuse y has already been declared.
+- hosting is not allowing
+- not allowing shadowing 
+
+
+-----------------------------------------------------
+const:
+- It is also block scope.
+- It will not allow assignment and declaration.   
+- const is not about changing const is about initialization.
+- It will not allow shadowing and hoisting.
+
+
+Note :  read only means cannot change.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+---------------------------------------------------
+        JavaScript Data Types
+- Data Type defines the data structure.
+- DS defines types and its range.
+- JavaScript types are 
+    1. Primitive Types
+    2. Non Primitive Types 
+
+- Primitive Types 
+    number 
+    string 
+    boolean
+    null 
+    undefined
+- Non Primitive Types
+    array
+    object
+    map
+
+ Number Type
+-------------- 
+
+- Signed    -1 
+- Unsigned   1
+- Float     34.33
+- Double    356.544
+- Decimal   2350.2490
+- Exponent  2e3 [2000]
+- Binary    0b1010 [10]
+- Hexa      [0,f]
+- Octa      [Oo756]
+
+
+String 
+----------
+- single quota      ''
+- double quota      ""
+- back tick         `` [embedded expression => ${}]
+
+
+- Boolean 
+    true
+    false
+
+- null
+- undefined
+
+
+
+
+---------------------------------------------
+JavaScript Non-Primitive Types
+1. Array 
+    - Reduce overhead
+    - Recuce complexity
+    - JS array can handle various types of values
+    - JS array size can change dynamically
+
+    Syntax: 
+        var products = [];
+        var products = new Array()
+    
+    Ex: 
+    function f1(){
+        var values = ["A",10,true,['hyd','delhi'],function(){console.log('hello')}];
+        values[4]();
+    }
+    f1();
+
+
+    - Array supports "de-structuring"
+
+    Ex:
+    function f1(){
+        var values = ["A",10,true,['hyd','delhi'],function(){console.log('hello')}];  
+
+        // odd pratice 
+        //var cities = values[3];
+        //var n = values[1];
+
+        // de-structuring
+        var [name,id,stock,cities,hello] = values;
+        console.log(cities[1]);
+        hello(); 
+    }
+    f1()
+
+
+- Array Methods 
+    indexOf(),lastIndexOf()
+    push(),pop(),slice(),unshift(),splice() etc...
