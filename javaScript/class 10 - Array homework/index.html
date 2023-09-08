@@ -1,72 +1,292 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Array Ques</title>
-</head>
-<body>
+  </head>
+  <body>
     <script>
-        // Ques 1 :
-        document.write(' Given an array, print the sum of the numbers in	the	array <br>')
-        let a1 = [1,-1,-13];
-        let sum1 =0;
-        for(let i = 0;i<a1.length;i++){
-            sum1=sum1+a1[i];
+      // Task 2 :
+      document.write(
+        " Given an array, print the sum of the numbers in	the	array <br>"
+      );
+      let a1 = [1, -1, -13];
+      let sum1 = 0;
+      for (let i = 0; i < a1.length; i++) {
+        sum1 = sum1 + a1[i];
+      }
+      document.write(sum1);
+
+      //Task 3 :
+      document.write(
+        "<br><br> Given an array, print the sum and count of	the	multiples of 3	in	the	array <br>"
+      );
+      let a = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+      let sum = 0,
+        count = 0;
+      for (let i = 0; i < a.length; i++) {
+        if (a[i] % 3 == 0) {
+          sum = sum + a[i];
+          count++;
         }
-        document.write(sum1);
+      }
+      document.write("Sum is :" + sum);
+      document.write(" Count is :" + count);
 
+      // Task 4 :
+      document.write(
+        "<br><br> Given	an	array,	print the	sum	of	the	even and	odd	numbers	in	the	array. <br>"
+      );
+      let a3 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+      let sumEven = 0,
+        sumOdd = 0;
+      for (let i = 0; i < a.length; i++) {
+        if (a[i] % 2 == 0) {
+          sumEven = sumEven + a[i];
+        } else {
+          sumOdd = sumOdd + a[i];
+        }
+      }
+      document.write("Sum of even :" + sumEven);
+      document.write(" Sum of odd " + sumOdd);
 
-        //Ques 2 :
-        document.write('<br><br> Given an array, print the sum and count of	the	multiples of 3	in	the	array <br>')
-        let a = [1,2,3,4,5,6,7,8,9,10];
-        let sum = 0, count=0;
-        for(let i=0;i<a.length;i++){
-            if(a[i]%3==0){
-                sum=sum+a[i];
-                count++;
+      //Task 5 :
+      document.write(
+        "<br><br> Given	an	array,	print the count	and	the	numbers	greater	than 21 in	the	array<br>"
+      );
+      let a4 = [5, 18, 26, 30, 40, 6];
+      let values = 0,
+        count4 = 0;
+      document.write("values :");
+      for (let i = 0; i < a4.length; i++) {
+        if (a4[i] > 21) {
+          document.write(a4[i] + " ");
+          count4++;
+        }
+      }
+      document.write("count is :" + count4);
+
+      //Task 6 :
+      document.write(
+        "<br><br> Given	an	array,	add	10	to	all	the	elements	in	the	array<br>"
+      );
+      let a5 = [2, 3, 5, 7];
+      for (let i = 0; i < a5.length; i++) {
+        document.write(a5[i] + 10 + " ");
+      }
+
+      // Task 7 : Input  ['Jack',	'Mary']  Expected Output['Hello	Jack', 'Hello	Mary']
+      document.write("<br><br>");
+      let arr6 = ["Jack", "Mary"];
+      for (let i = 0; i < arr6.length; i++) {
+        document.write(" Hello " + arr6[i]);
+      }
+
+      //Task 8
+      document.write("<br><br>");
+      let arr7 = [5, 18, 23, 30];
+      for (let i = 0; i < arr7.length; i++) {
+        if (arr7[i] % 3 == 0) {
+          document.write(arr7[i] + " ");
+        } else {
+          document.write(arr7[i] + 1 + " ");
+        }
+      }
+
+      // Task 9
+      let arr9 = [4, 8, 12, 20, 6];
+      for (let i = 0; i < arr9.length; i++) {
+        if (arr9[0] > arr9[arr9.length - 1]) {
+          document.write("First " + arr9[0]);
+          break;
+        } else if (arr9[0] < arr9[arr9.length - 1]) {
+          document.write("last " + arr9[arr9.length - 1]);
+          break;
+        } else if (arr9[0] == arr9[arr9.length - 1]) {
+          document.write("Equal " + a[0]);
+          break;
+        }
+      }
+
+        // Task 10
+        let array1 = [1,2,3];
+        let array2 = [10,20,30];
+        let sumArray1 = 0,sumArray2 = 0;
+        for(let i = 0;i<array1.length;i++){
+            sumArray1=sumArray1+array1[i]
+        }
+        for(let i = 0;i<array2.length;i++){
+            sumArray2=sumArray2+array2[i]
+        }
+
+        if(sumArray1>sumArray2){
+            document.write('Big1');
+        }
+        else if(sumArray1<sumArray2){
+            document.write('Big2');
+        }
+        else if(sumArray1==sumArray2){
+            document.write('Equal')
+        }
+
+        // Task 11
+        let array11 = [100,200,10,20,50,64];
+        for(let i = 0;i<array11.length;i++){
+            if(array11[i]>array11[i+1]){
+            document.write("Max "+array11[i])
             }
         }
-        document.write('Sum is :'+sum)
-        document.write(' Count is :'+count)
 
 
-        // Ques 3 :
-        document.write('<br><br> Given	an	array,	print the	sum	of	the	even and	odd	numbers	in	the	array. <br>')
-        let a3 = [1,2,3,4,5,6,7,8,9,10];
-        let sumEven = 0, sumOdd=0;
-        for(let i=0;i<a.length;i++){
-            if(a[i]%2==0){
-                sumEven=sumEven+a[i];
-            }else{
-                sumOdd = sumOdd+a[i];
+        // Task 12 
+        let arr12 = [3,3,3,6]
+        let result12 = 'ALLSAME'
+        
+        for (let i = 1; i < arr12.length; i++) {
+            if (arr12[i] !== arr12[0]) {
+            result12 = "DIFFERENT";
+            break;
             }
         }
-        document.write('Sum of even :'+sumEven)
-        document.write(' Sum of odd '+sumOdd)
+        document.write(result12)
 
 
-        //Ques 4 :
-        document.write('<br><br> Given	an	array,	print the count	and	the	numbers	greater	than 21 in	the	array<br>')
-        let a4 = [5,18,26,30,40,6];
-        let values = 0,count4=0;
-        document.write('values :');
-        for(let i=0;i<a4.length;i++){
-            if(a4[i]>21){
-                document.write(a4[i]+' ');
-                count4++;
+        // Task 13
+        let array13 = [11,	17,	8,	10, 21];
+        let count13 = 0
+        for(let i= 0;i<array13.length;i++){
+            if(array13[i]%2==0 ||array13[i]%3==0 || array13[i]%5==0 || array13[i]%7==0){
+                count13++;
             }
         }
-        document.write('count is :'+count4)
+        document.write(count13)
 
-
-        //Ques 5 :
-        document.write('<br><br> Given	an	array,	add	10	to	all	the	elements	in	the	array<br>')
-        let a5 =[2,3,5,7];
-        for(let i=0;i<a5.length;i++){
-            document.write(a5[i]+10+" ")
+        // Task 14
+        let arr = [1,2,3];
+        for (let i = 0; i < arr.length; i++) {
+        if (arr[i]==arr[i+1]){
+            document.write('NOT');
+            break;
+        }
+        else if(arr[i]<arr[i+1]){
+            document.write('SEQUENCE');
+            break;
+        }
+        else{
+            document.write('NOT');
+            break;
+        }
         }
 
+        // Task 15 
+
+        //Task 16 
+        let arr16 = "Javascript";
+          let isFound = false;
+          for(let i =0;i<arr16.length;i++){
+              if(arr16[i]=='a' && arr16[i+1]=='b' ){
+                  isFound=true;
+              }
+          }
+          if(isFound){
+              console.log('AB Found')
+          }else{
+              console.log('Ab Not Found')
+          }
+
+          // Task 17
+          let arr17 =[5,18,26,30,40,6,9];
+          let b17 = [];
+
+          for(let i = 0;i<arr17.length;i++){
+              if(arr17[i]%2==0){
+                  b17.push(arr17[i]);
+              }
+          }
+          // printing items of 2nd array 
+          for(let i = 0;i<b17.length;i++){
+            console.log(b17[i])
+          }
+
+
+
+          // Task 18
+          let arr18 =[5,18,26,30,40,6,9];
+          let b18 = [];
+
+          for(let i = 0;i<arr18.length;i++){
+              if(arr18[i]%2==0){
+                  b18.unshift(arr18[i]);
+              }
+          }
+          // printing items of 2nd array 
+          for(let i = 0;i<b18.length;i++){
+            console.log(b18[i])
+          }
+
+
+
+        //Task 19
+        let arr19 = [20,14,2,7,18]
+        while(arr19.length){
+            let result = arr19.pop();
+            console.log(result)
+        }
+
+
+        //Task 20
+        let arr20 = [20,14,2,7,18]
+        while(arr20.length){
+            let result = arr20.shift();
+            console.log(result)
+        }
+
+
+        // Task 21
+        let arr1 = ['Jack','Bob','Ed','Steve'];
+        let arr2 = 'Bob' 
+        arr1 = arr1.filter(e => e !== arr2);
+        console.log(arr1)
+
+        // Task 22
+        let array22 = [5,18,26,30,40,6];
+
+        let largestNumber = array22[0];
+        for(let i = 1;i<array22.length;i++){
+            if(array22[i]>largestNumber){
+                largestNumber=array22[i];
+            }
+        }
+        console.log(largestNumber)
+
+        // Task 23
+        const numbers = [5,18,26,30,40];
+        let addedNumber = 6;
+        numbers.push(addedNumber);
+        let result = numbers.sort(function(a, b){return a - b});
+        console.log(result)
+
+
+        // Task24
+        // let a =[5,18,26,30];
+        // let b = [40,6];
+        // let result = a.concat(b);
+        // console.log(result)
+
+        // Task 25
+        let ar1=[5,18,26,30];	
+        let ar2 =[101,102];
+        let ar3 = [];
+
+        for(let i = 0;i<ar1.length;i++){
+            ar3.push(ar1[i]);
+        }
+        for(let i = 0;i<ar2.length;i++){
+            ar3.push(ar2[i]);
+        }
+
+        console.log(ar3)
     </script>
-</body>
+  </body>
 </html>

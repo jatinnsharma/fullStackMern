@@ -43,10 +43,10 @@
         .then((completeData)=>
         {
             let data1 = "";
-      products =   completeData.map((value)=>{
-                data1+=`<div class="card card-spacing" style="width: 18rem">
+      products=   completeData.map((value)=>{
+                data1+=`<div class="card card-spacing" style="width: 18rem; height:30rem">
         <img 
-          class="card-img-top card-img mx-auto" 
+          class="card-img-top card-img mx-auto" style="width:15rem;height:20rem" 
           src=${value.image}
           alt="image"
         />
@@ -78,13 +78,15 @@
     let products = [];
     const searchInput = document.getElementById('search-bar');
     searchInput.addEventListener('input',e=>{
-      const value = e.target.value;
-      console.log(products)
-      products.forEach(product=>{
-        const isVisible = product.name.includes(value);
-        product.element.classList.toggle('hide',!isVisible)
+      const value = e.target.value.toLowerCase()
+      console.log(value)
+      products.forEach(posts=>{
+        console.log(posts)
+        const isVisible = posts.name.toLowerCase().includes(value)
+        posts.element.classList.toggle('hide',!isVisible)
       })
-    })
+      })
+
     </script> 
 
 
