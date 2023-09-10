@@ -1,0 +1,66 @@
+- JavaScript Data Types
+    a) Primitive Type
+    b) Non Primitive Type
+
+- Primitive Types are Immutable,they can't change the structure.
+    a) Number
+    b) String 
+    c) Boolean
+    d) Null
+    e) Undefined 
+    f) Symbol 
+
+- Non Primitive Types are Mutable,they can change the structure according to
+memory available.
+    a) Array
+    b) Object 
+    c) Map
+    d) Set
+
+
+Array
+-------
+
+-Reduced Overhead
+-Recuce complexity
+-Array can store various types of values.
+-Array size can change dynamically
+-You can store any type of value in array.
+-Array de-structuring 
+
+
+
+- Array Methods
+-----------------
+1.Read 
+    toString()
+    join()
+    slice()
+    for..in
+    for..of
+    map() 
+
+2.Adding 
+    push()
+    unshift()
+    splice()
+    ex:
+    let a = ['Jatin','sharma'];
+    a.splice(1,0,'kids');
+    console.log(a)
+
+3.Remove 
+    pop()
+    shift()
+    splice()
+
+4. Sorting
+    sort()
+    reverse()
+
+5. Searching
+    find()
+    filter()     
+
+
+// Object 

@@ -1,0 +1,117 @@
+JavaScript Non-Primitive Types 
+- Array
+- Object 
+
+
+Issues with Object 
+--------------------
+-It is key and values collection,key must be only string type.
+    {
+        "key":any
+    }
+- It is slow in access 
+- You need explicit iterators to read the keys and values.
+    for..in,for..of
+-It requires explicit operators to manipulate.
+    delete,in 
+
+Ex:
+var product = {
+    name:'TV',
+    price : 300.1112
+}
+delete product.price;
+document.write(`Name=${product.name}<br>Price=${product.price}<br>`)
+document.write(`Is Price a member of Product : ${'Price ' in product} <br>`);
+for(var key in product){
+    document.write(key+"<br>");
+}
+
+- No size for object.
+
+
+
+Map
+----
+
+-It is a key and value collection.
+-key can be any type.
+-It provides implicit iterators 
+-It is fast 
+-It provides implicit methods to manipulate.
+-It is not for structured data 
+
+Syntax:
+----------
+var ref = new Map()
+
+-Methods 
+----------
+    set()
+    get()
+    keys()
+    values()
+    entries()
+    delete()
+    has()
+    clear()
+
+Ex:
+----
+var topics = new Map();
+topics.set('html','It is a markup language')
+topics.set(1,{Name:'TV',price:7000.44});
+
+document.write(topics.get(1).Name+"<br>")
+document.write(topics.get('html')+"<br>")
+
+
+Nots : The major issues with structured data in JavaScript in unique identification.
+
+
+Symbols
+--------
+- It is a Primitive type.
+- It is immutable type.
+- It is hidden from iterator.
+- It is implicitly used for Iterators.
+
+Syntax:
+const UserID = Symbol('UserID');
+var UserDetails = {
+    [UserID]:"John_nit",
+    UserName:"John",
+    Email:"john@gmail.com"
+}
+for(var key in UserDetails){
+    document.write(key + "<br>");
+}
+document.write(UserDetails[UserID])
+
+// Date Type 
+--------------
+- Date is defined by using Date()
+
+Syntax : 
+    var mfd = new Date("YY-MM-DD Hr:Min:Sec:MilliSec");
+    if you leave it empty then it is show you this time date.
+
+- Date Methods 
+    getHours()      setHours()...
+    getMinutes()
+    getSeconds()
+    getMilliSeconds()
+    getDate()       [22]       
+    getDay()        [0=Sunday]
+    getDay()        [0=Jan]
+    getMonth()
+    getFullYear()
+    toLocateDateString()
+    toLocateTimeString()
+
+
+
+    Regular Expression 
+    -------------------
+- It defines a pattern to validate the input value.
+- Patterns are build by using Meta 

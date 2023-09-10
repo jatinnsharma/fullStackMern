@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Branded Cloths</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+   
+   <style>
+
+   th,
+   td{
+    padding:30px;
+    text-align:left;
+    border:1px solid #ddd;
+   }  
+    
+   th{
+    background-color:#000000;
+    color:white;
+   }
+
+   tr:hover{
+    background-color: rgb(107.170,234);
+   }
+    
+      </style>
+    
+
+
+
+</head>
+  <body>
+
+   <div id="user"></div>
+   <table id="tabel">
+    <thread>
+      <tr>
+        <th>ID</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Email</th>
+<th>User Name</th>
+<th>Password</th>
+<th>Phone Number</th>
+<th>City</th>
+<th>Street</th>
+<th>Zip Code</th>
+      </tr>
+    </thread>
+<tbody id="userdata"></tbody>
+</table>
+<script>
+  fetch("https://fakestoreapi.com/products")
+  .then((res) => {
+    return res.json();
+  })
+  .then((completedata)=> {
+    let data="";
+    completedata.map((values) =>
+    {data+=`
+      <tr>
+        <td>${values.id}</td>
+<td>
+  {values.name.firstname}</td>
+  <td>$
+    {values.name.lastname}</td.
+    <td>${values.email}</td>
+    <td>${values.username}</td>
+    <td>${values.passwprd}</td>
+    <td>${values.phone}</td>
+    <td>${values.address.city}</td>
+    <td>${values.address.street}</td>
+    <td>${values.address.zipcode}</td>
+    `;
+  });
+  document.getElementById("userdata").innerHTML= data;
+})
+.catch((err) => console.log(err));
+    </script>
+    </body>
+</html>
