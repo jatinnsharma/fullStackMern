@@ -1,0 +1,126 @@
+JavaScript Operators 
+---------------------
+
+1. Arithematic Operators 
+    + , - , * , / , % , ++ , -- , ** 
+    **=> Math.pow()
+
+2. Comparision Operators 
+    == , ===
+    "10" == 10 => true 
+    "10" === 10 => false 
+
+3. Assignment Operators
+4. Logical Operators 
+5. Bitwise Operators
+6. Special Operators 
+    - typeof 
+    - instanceof 
+    - in 
+    - new 
+    - void 
+    - delete etc..
+
+JavaScript Functions 
+----------------------
+
+- A functions is used for refactoring the code.
+- Refactoring is the process of extracting a set of lines and storing under the reference of file or function.
+- So that you can re-use the code.
+
+Syntax 
+--------
+    function Name(){
+        statments;
+    }Name();
+
+- Select the lines 
+- Right click on selection 
+- Select "Refactor" 
+- Choose "Extract to Global Function"
+- Set Name "PrintNumbers()"
+
+- Every function comprises 
+    a) Declaration 
+    b) Signature
+    c) Definition 
+
+
+Syntax : 
+    function PrintNumbers() => Declaration
+    PrintNumbers()          => Signature 
+    {}                      => Definition
+
+Example 
+---------
+function PrintNumbers(){
+    for(var i = 1 ;i<=5;i++){
+        console.log(i);
+    }
+}
+PrintNumbers()
+
+
+Function Parameters 
+-----------------------
+- Parameters are used to modify function.
+- Paramters defined in function declaration are know as "Formal Parameters" 
+- Formal Parameter is just a memory reference name.
+- You can store any type of value in parameter
+    a) Primitive 
+    b) Non Primitive 
+    c) Function
+- Every Parameter is mandatory 
+- Every Parameter have order dependency 
+- You can multiple parameters but have to use in same order.
+- You can't ignore any parameter.
+- JavaScript will not support function overload.
+
+
+function VerifyPassword(password,success,error){
+    if(password=="admin"){
+        success();
+    }else{
+        error();
+    }
+}
+
+VerifyPassword("John",function(){
+    console.log('Login success..');
+},function(){
+    console.log('login failed');
+})
+
+- JavaScript function parameter can hold a functon.
+- Functions are defined as arguments to handle "Call Back"
+- Call Back is the process of executing function according to state and situation.
+
+- ECMA Standards define max 1024 params 
+- ES>5 allows to use "Rest Parameter".
+- A single rest parameter can allow multiple arguments.
+- It is defined by using " ...paramName" 
+
+
+
+
+- Every function can have only one rest parameter.
+- Rest parameter must be the last parameter in formal list
+
+Example 
+----------
+function Details(title,...productDetails){
+    var [id,name,price,stock,cities,rating] = productDetails;
+    console.log(`
+    ${title}\n
+    Id=${id}\n
+    Name=${name}\n
+    Price=${price}\n
+    Stock=${stock}\n
+    Cities=${cities.toString()}\n
+    Rating=${rating.rate} [${rating.count}]`)
+}
+
+Details("Product details",1,"TV",1221.123,true,["Delhi","Hyd"],{rate:3.4,count:599})
+
+
+
