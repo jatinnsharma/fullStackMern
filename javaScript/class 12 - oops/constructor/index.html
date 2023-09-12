@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Super Class</title>
+</head>
+<body>
+    <script>
+        class student{
+            constructor(name,className,id,age){
+                this.name=name;
+                this.class=className;
+                this.id=id;
+                this.age=age;
+            }
+            display(){
+                console.log(`Student ID is : ${this.id} , name is : ${this.name} , age is : ${this.age} and class : ${this.class} `)
+            }
+        }
+        class playerGame extends student{
+            constructor(name,className,id,age,playerGame){
+                super(name,className,id,age)
+                this.studentgame = playerGame;
+            }
+            display(){
+                console.log(`Student ID is : ${this.id} , name is : ${this.name} , age is : ${this.age} , class : ${this.class} and player game is : ${this.studentgame}`)
+            }
+        }
+
+        class dance extends student{
+            constructor(name,className,id,age,dance){
+                super(name,className,id,age)
+                this.dance = dance;
+            }
+            display(){
+                console.log(`Student ID is : ${this.id} , name is : ${this.name} , age is : ${this.age} , class : ${this.class} and dance is : ${this.dance}`)
+            }
+        }
+        class singer extends student{
+            constructor(name,className,id,age,singer){
+                super(name,className,id,age)
+                this.singer = singer;
+            }
+            display(){
+                console.log(`Student ID is : ${this.id} , name is : ${this.name} , age is : ${this.age} , class : ${this.class} and singer is : ${this.singer}`)
+            }
+        }
+
+        let student1 = new student('jatin','BCA','1',21);
+        student1.display();
+
+        let student2 = new playerGame('vishal','BA','2',22,'Football');
+        student2.display();
+
+        let student3 = new dance('Gora','Bcom','3',24,'breakDance');
+        student3.display();
+
+        let student4 = new singer('Nurender','BCA','4',25,'punjabi Singer');
+        student4.display();
+    </script>
+</body>
+</html>
