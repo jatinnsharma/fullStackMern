@@ -1,0 +1,139 @@
+
+Spread 
+-------
+- It uses an iterator implicity to read values from an array and pass as argument as a function.
+- JavaScript ES6 introduced Spread technique 
+- rest is about parameters 
+- spread is about arguments 
+
+function Addition(a,b,c){
+    return a+b+c;
+}
+
+var numbers = [10,30,50];
+
+console.log("Addition="+Addition(...numbers));
+
+
+Function Return
+------------------
+- Function can be void type.
+- Function can be discarded with void.
+- You can discard void by using "return".
+
+Syntax:
+----------
+    function Addition(a,b){
+        return a+b;
+    }
+    console.log("addtion="+Addition(20,40))
+
+
+FAQ: Can a void function have return keyword?
+Ans: Yes.If you define any statement after return it is not reachable.
+
+FAQ: Can a function have multiple return? 
+Ans: Yes.
+Syntax:
+--------
+function Demo(a){
+    if(isNaN(a)){
+        return `Hello !${a}`;
+    }else{
+        return a = a +1;
+    }
+}
+
+FAQ:What type of data a function return?
+Ans:Any type : Primitive or Non Primitive. 
+
+// STORE DATA 
+function Products(){
+    return [
+        {Name:'Jatin',Price:434.353}
+        {Name:'Mobile',Price:13000.121}
+    ]
+};
+// READING 
+for(let item of Product()){
+    console.log(`${item.Name}-${item.Price}`)
+}
+
+
+// function Recursion 
+- Recursion is a technique of calling  a function with the context (calling within function)
+- It is used to create Batch Operations  
+
+Syntax: 
+    function f1(){
+        f1();
+    }
+
+Batch Operation - npm start 
+npm start is a batch operation which is used to run the project.
+
+copy con job.bat 
+data 
+time 
+dir 
+
+now you no need to type every commend one by one 
+just type job command then all the command run one by one.
+
+Example:
+---------
+function Factorial(n){
+    if(n<=0){
+        return 1;
+    }else{
+        return n*Factorial(n-1)
+    }
+}
+console.log("factorial of 6 is " + Factorial(6))
+
+
+Arrow Function
+------------------
+- It is a shot hand technique of write a Function
+Synax: 
+------
+    function Hlo(){
+        return "hello world"
+    }const msg = ()=> "Hello World";
+
+-Function without name is known as "Anonymous Function".
+
+const add = (a,b) => a+b
+
+Parameters less
+-----------------
+const msg = ()=> "Welcome"
+console.log(msg())
+
+const hello = () => console.log("Hello Zia)
+const hello = () =>{ console.log("Hello Zia);
+console.log("Welcome")}
+
+
+const hello = username => `hello ${username}`
+const hello = (username,age) => `hello ${username} and age ${age}`
+
+
+Note : find is used for one item to find and filter is used to find multiple items 
+
+
+Example:
+--------
+let products = [
+    {Name:'TV',Category:"Electronics"},
+    {Name:'Nike Casuals',Category:"Footwear"},
+    {Name:'Mobile',Category:"Electronics"},
+]
+
+var electronics = products.filter(function(product){
+    return product.Category=="Electronics";
+})
+
+var footwear = products.filter(product=>product.Category=="Footwear");
+console.log(electronics)
+console.log(footwear)
