@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clock </title>
+    <style>
+        
+    </style>
+</head>
+<body>
+    <center>
+        <h1>Today's time  </h1>
+        <div id="clock">
+    
+        </div>
+    </center>
+
+    <script>
+        function showTime(){
+
+            let time = new Date()
+            let hours = time.getHours();
+            let min = time.getMinutes();
+            let sec = time.getSeconds();
+            let session = 'AM';
+
+            if(hours>=12){
+                hours = hours - 12;
+                session = 'PM';
+                if(hours == 12){
+                    hours == 0;
+                } 
+            }
+
+           hours= hours<10 ? "0"+hours : hours 
+           min = min<10 ? "0"+min : min 
+           sec =sec<10 ? "0"+sec : sec
+            
+            document.getElementById('clock').innerHTML = hours + ":" + min + ':' + sec + " " + session
+            setTimeout(showTime,1000)
+        }
+        showTime();
+
+        
+    </script>
+
+</body>
+</html>
