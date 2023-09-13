@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Polymorphism</title>
+</head>
+<body>
+    <script>
+        class firstClass{
+             add(){
+                console.log(12+22);
+             }
+        }
+        class secondClass extends firstClass{
+            add(){
+                console.log(12-22);
+            }
+        }
+        class thirdClass extends secondClass{
+            add(){
+                console.log(12*22);
+            }
+        }
+
+        let first = new firstClass();
+        let second = new secondClass();
+        let third = new thirdClass();
+
+        first.add();
+        second.add();
+        third.add();
+
+    </script>
+</body>
+</html>
