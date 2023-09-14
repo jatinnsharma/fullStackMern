@@ -1,21 +1,20 @@
-import Cards from "./component/Cards";
 
-import Carousel from "./component/carousel/Carousel";
-import Header from "./component/header/Header";
-import NavData from "./component/header/NavData";
+import ProductDetail from "./page/Product/ProductDetail";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap';
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Home from "./page/Home/Home";
 
 function App() {
   return (
-    <div>
-     <Header/>
-     <NavData/>
-     <Carousel/>
-    
-     
-     <Cards/>
-    </div>
+
+      <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home/>} />
+        <Route path="/product-details/:id" element={<ProductDetail />} />
+      </Routes>
+      </BrowserRouter>
+
   );
 }
 

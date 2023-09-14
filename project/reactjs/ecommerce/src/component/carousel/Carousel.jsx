@@ -9,9 +9,9 @@ const Carousel = () => {
         data-bs-ride="carousel"
       >
           <div className="carousel-inner">
-        {bannerData.map((item,key) => (
-            <div class="carousel-item active" data-bs-interval="10000">
-              <img src={item.url} class="d-block w-100" alt="..." />
+        {bannerData.map((item) => (
+            <div class="carousel-item active" data-bs-interval="5000">
+              <img src={item.url} className="d-block w-100" alt="..." />
             </div>
         ))}
         </div>

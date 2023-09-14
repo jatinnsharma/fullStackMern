@@ -2,7 +2,6 @@ import { navData } from "../../constants/data"
 
 const NavData = () => {
   return (
-    
     <div className="flex text-center gap-9">
         {
             navData.map(item=>(
