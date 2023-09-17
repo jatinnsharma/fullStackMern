@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AJAX</title>
+</head>
+
+<style>
+    body{
+        background-color: rgb(38, 39, 37);
+        font-family: sans-serif;
+        font-size: large;
+    }
+    h1{
+        color: white;
+        letter-spacing:0.3vw;
+        
+    }
+    button{
+        color: black;
+        background-color: white;
+        padding: 1vw;
+        margin: 1vw;
+        border-radius: 5px;
+        border:none
+    }
+    tr{
+        color: white;
+    }
+    th,
+    td {
+      border-radius: 5px;
+    
+      padding: 10px;
+      height: 5vh;
+      width: 100vw;
+      text-align: left;
+      border: 1px solid #ddd;
+    }
+    th {
+      background-color: #252424;
+      color: white;
+    }
+    tr:hover {
+        color: white;
+      background-color: rgb(107, 170, 234);
+    }
+  </style>
+
+
+<body>
+    <center>
+        <h1>AJAX Data Api Fectching</h1>
+        <button id="employeeBtn"> Fetch Employee Data</button>
+        <button id="userBtn">Fetch user Data</button>
+        <button id="clearBtn">Clear Button</button>
+        <table>
+            <thead>
+                <tr>
+                    <th># Id</th>
+                    <th>first Name</th>
+                    <th>Last Name</th>
+                    <th>Email</th>
+                    <th>Contact Number</th>
+                    <!-- <th>DOB</th> -->
+                </tr>
+            </thead>
+            <tbody id="data">
+
+            </tbody>
+        </table>
+    </center>
+
+
+    <script src="ajax.js"></script>
+</body>
+</html>
