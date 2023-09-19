@@ -8,15 +8,21 @@
 <body>
     <div id="root"></div>
 
-    <script>
-        // creating h1 tag
-        const heading = document.createElement("h1");
-        // adding data to h1 tag
-        heading.innerHTML="Namaste Everyone from JavaScript";
-        
-        const root = document.getElementById("root");
-        // connecting root and heading
-        root.appendChild(heading);
-    </script>
 </body>
+<!-- Added react app -->
+<script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+
+
+<script>
+
+    // whatever we doing with js same thing with react 
+    // creating h1 tag with namaste
+    const heading = React.createElement('h1',{},"Namaste Everyone!");
+    
+    const root = ReactDOM.createRoot(document.getElementById('root'));
+
+
+    root.render(heading);
+</script>
 </html>
