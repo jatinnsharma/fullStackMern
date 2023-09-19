@@ -20,9 +20,10 @@
     // creating h1 tag with namaste
     const heading = React.createElement('h1',{},"Namaste Everyone!");
     
+    console.log(heading) // react element is object
     const root = ReactDOM.createRoot(document.getElementById('root'));
 
-
+    // passing a react element inside the root
     root.render(heading);
 </script>
 </html>
