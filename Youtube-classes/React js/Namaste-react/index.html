@@ -4,40 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="index.css">
 </head>
 <body>
     <div id="root">No render</div>
 
 </body>
-<!-- Added react app -->
+<!-- Added react app cdn -->
 <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
 <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
 
 
-<script>
+<script src="App.js">
 
-    // whatever we doing with js same thing with react 
-    // creating h1 tag with namaste
-    const heading1 = React.createElement('h1',
-    {
-        id:'title',
-    },
-    "Namaste Everyone!");
-    
-    const heading2 = React.createElement('h2',
-    {
-        id:'title',
-    },
-    "Namaste Everyone ! this is heading 2");
-
-    const container = React.createElement('div',{
-        id:'container',
-    },[heading1,heading2]);
-    
-    console.log(heading1) // react element is object
-    const root = ReactDOM.createRoot(document.getElementById('root'));
-
-    // passing a react element inside the root
-    root.render(container);
 </script>
 </html>

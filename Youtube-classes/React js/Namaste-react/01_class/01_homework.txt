@@ -1,0 +1,5 @@
+Home work 
+what is emmit?
+What is cdn? content delivery network?
+what is crossorigin?
+what is async vs defer 
