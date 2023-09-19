@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="root"></div>
+
+    <script>
+        // creating h1 tag
+        const heading = document.createElement("h1");
+        // adding data to h1 tag
+        heading.innerHTML="Namaste Everyone from JavaScript";
+        
+        const root = document.getElementById("root");
+        // connecting root and heading
+        root.appendChild(heading);
+    </script>
+</body>
+</html>
