@@ -11,7 +11,7 @@ export const data = [
       id: "2",
       title: "Upma",
       category: "Breakfast",
-      price: "$1",
+      price: "₹ 1",
       img: "https://c.ndtvimg.com/2021-04/37hi8sl_rava-upma_625x300_17_April_21.jpg?im=FeatureCrop,algorithm=dnn,width=620,height=350",
       desc: " A quintessential South Indian Breakfast! Made with protein-packed urad dal and semolina followed by crunchy veggies and curd, this recipe makes for a hearty morning meal. With some grated coconut on top, it gives a beautiful south-Indian flavour.",
     },
