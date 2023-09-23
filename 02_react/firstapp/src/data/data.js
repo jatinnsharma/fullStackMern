@@ -78,6 +78,21 @@ export const data = [
       price: "$1",
       img: "https://i.ndtvimg.com/i/2017-10/makhmali-kofte_620x350_51508918483.jpg",
       desc: "A rich gravy made of khus khus, coconut and milk that tastes best with koftas made from khoya. This velvety and creamy recipe will leave you licking your fingers. Makhmali kofte can be your go-to dish for dinner parties as this is quite different from other kofta recipes and extremely delicious.",
+    }, {
+      id: "11",
+      title: "Upma",
+      category: "Dinner",
+      price: "₹ 10",
+      img: "https://c.ndtvimg.com/2021-04/37hi8sl_rava-upma_625x300_17_April_21.jpg?im=FeatureCrop,algorithm=dnn,width=620,height=350",
+      desc: " A quintessential South Indian Breakfast! Made with protein-packed urad dal and semolina followed by crunchy veggies and curd, this recipe makes for a hearty morning meal. With some grated coconut on top, it gives a beautiful south-Indian flavour.",
+    },
+    {
+      id: "12",
+      title: "Paneer Aachari",
+      category: "Dinner",
+      price: "$13",
+      img: "https://i.ndtvimg.com/i/2015-04/paneer_625x350_61429707960.jpg",
+      desc: "Don't get intimidated by the list of ingredients because not only are already in your kitchen cabinet, but also because all they'll need is 20 minutes of your time. Chunks of cottage cheese cooked in some exciting spices, yogurt and a pinch of sugar.",
     },
   ];
    
