@@ -18,11 +18,13 @@ const Cards = () => {
     // setSelectedCategory(category);
   };
   const [searchTerm, setSearchTerm] = useState("");
+
   return (
-    <div>
-      <center><h1>Food App</h1></center>
-      
-      <div style={{width:'90vw',margin:'auto'}} className="d-flex justify-content-around mt-4 ">
+    <>
+      <div
+        style={{ width: "90vw", margin: "auto" }}
+        className="d-flex justify-content-around mt-4 "
+      >
         <div className="">
           <button
             className="btn btn-danger m-2"
@@ -55,7 +57,7 @@ const Cards = () => {
             Snaks
           </button>
         </div>
-        
+
         <input
           style={{ width: "40%", height: "40px" }}
           type="text"
@@ -69,7 +71,6 @@ const Cards = () => {
       <div
         style={{
           display: "flex",
-          
           flexWrap: "wrap",
           gap: 30,
           alignItems: "start",
@@ -80,18 +81,20 @@ const Cards = () => {
         {filteredFoods
           .filter((val) => {
             if (searchTerm === " ") {
+              // all show
               return val;
             } else if (
               val.title.toLowerCase().includes(searchTerm.toLowerCase())
             ) {
+              // filter data
               return val;
             }
           })
           .map((items) => {
-            return <Card data={items} />;
+            return <Card data={items} key={items.id} />;
           })}
       </div>
-    </div>
+    </>
   );
 };
 
