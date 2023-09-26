@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // A closure is the combination of a function and the lexical environment
+//  within which that function was declared
+
+
+// Example 1:
+let a = 122;
+function outerfun(){
+    console.log(a);
+    let num = 124;
+    innerFun();
+    function innerFun(){
+        console.log(num)
+    }
+}
+
+outerfun();
+
+
+
+// Example 2 : 
+
+// let a = 10 ;
+
+// function outerFun(){
+//     console.log(a);
+//     let b = 12
+//     function innerFun(){
+//         console.log(b)
+//     }
+//     return innerFun;
+// }
+
+// // outerFun();
+// const result = outerFun();
+// console.log(result)
+
+    </script>
+</body>
+</html>

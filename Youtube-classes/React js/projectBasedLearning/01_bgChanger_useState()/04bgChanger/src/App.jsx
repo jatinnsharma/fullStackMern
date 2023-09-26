@@ -3,6 +3,7 @@ import { useState } from "react"
 
 function App() {
   const [color, setColor] = useState('olive')
+
   return (
     <div className="w-full h-screen" style={{backgroundColor:color}}>
     <div className="bg-white fixed flex flex-wrap justify-center text-white place-items-center  bottom-12 inset-x-0 p-2 rounded-full items-center w-3/5 mx-80">
