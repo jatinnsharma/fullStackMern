@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Header </title>
+</head>
+<style>
+    body{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;  
+    }
+    .header{
+        display: flex;
+        background-color: black;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px;
+        overflow: hidden;
+    }
+    .logo{
+        font-size: 25px;
+    font-weight: bold;
+    }
+     
+    a{
+        color: white;
+        text-decoration: none;
+        padding-right:10px ;
+    }
+    .nav-right{
+        text-decoration: none;
+        list-style: none;
+        padding-right:10px; 
+        float: right;
+    }
+    
+    @media screen and (max-width: 500px) {
+    .header a {
+      float: none;
+      display: block;
+      text-align: left;
+    }
+    .nav-right {
+      float: none;
+    }
+  }
+</style>  
+<body>
+    
+    <div class="header">
+        <a href="http://www.facebook.com" class="logo">Logo</a>
+        <div class="nav-right">
+            <a href="#">About</a>
+            <a href="#">Content Us</a>
+            <a href="#">Login</a>
+        </div>
+    </div>
+</body>
+</html>

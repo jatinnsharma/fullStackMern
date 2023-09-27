@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 
-const UseState = () => {
-    const [count,setCount] = useState(0)
+ const UseState = () => {
+    const [count,setCount] = useState(0) 
 
     const Incerment = () =>{
         setCount(count +1)
@@ -16,7 +16,7 @@ const UseState = () => {
         setCount(count / 2)
     }
 
-  return (
+  return (      
     <>
     <h1>{count}</h1>
     <button onClick={Incerment}>+</button>

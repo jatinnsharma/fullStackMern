@@ -163,25 +163,25 @@
         document.write(count13)
 
         // Task 14
-        let arr = [1,2,3];
-        for (let i = 0; i < arr.length; i++) {
-        if (arr[i]==arr[i+1]){
-            document.write('NOT');
-            break;
-        }
-        else if(arr[i]<arr[i+1]){
-            document.write('SEQUENCE');
-            break;
-        }
-        else{
-            document.write('NOT');
-            break;
-        }
-        }
+        let arr = [12, 133, 14, 15, 16, 17];
+        let isSquence = true;
+ 
+ 
+        for (let i = 0; i < arr.length-1; i++) {
+                if (arr[i] + 1 !== arr[i + 1]) {
+                isSquence = false;
+                break;
+                }
+            }
+          if (isSquence) {
+            console.log("SEQUENCE");
+          } else {
+            console.log("NOT");  
+          }
 
         // Task 15 
 
-        //Task 16 
+        //Task 16   
         let arr16 = "Javascript";
           let isFound = false;
           for(let i =0;i<arr16.length;i++){
@@ -278,14 +278,17 @@
         let ar1=[5,18,26,30];	
         let ar2 =[101,102];
         let ar3 = [];
+        const length = Math.max(ar1.length, ar2.length);
 
-        for(let i = 0;i<ar1.length;i++){
-            ar3.push(ar1[i]);
+        for(let i = 0 ; i < length;i++){
+            if(i<ar1.length){
+                ar3.push(ar1[i]);
+            }
+            if(i<ar2.length){
+                ar3.push(ar2[i]);
+            }
         }
-        for(let i = 0;i<ar2.length;i++){
-            ar3.push(ar2[i]);
-        }
-
+        
         console.log(ar3)
     </script>
   </body>
