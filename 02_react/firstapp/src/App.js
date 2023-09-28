@@ -4,24 +4,24 @@ import ProductDetails from "./pages/ProductDetails";
 // import UseState from "./Hooks/useState/Index";
 // import BgColorChange from "./Hooks/useState/bgColor";
 import Header from "./components/Header/Header";
-import UseState from "./Hooks/useState/Index";
-import BgColorChange from "./Hooks/useState/bgColor";
-import Clock from "./Hooks/useState/clock/Index";
+// import UseState from "./Hooks/useState/Index";
+// import BgColorChange from "./Hooks/useState/bgColor";
+// import Clock from "./Hooks/useState/clock/Index";
 
 
 function App() {
   return (
     <>
-    {/* <Header/>
+    <Header/>
       <Routes>
         <Route path="/" element={<Cards/>}/>
         <Route path="product-details/:id" element={<ProductDetails/>}/>
-      </Routes>  */}
+      </Routes> 
       {/* <UseState/> */}
 
      {/* <BgColorChange/> */}
 
-     <Clock/>
+     {/* <Clock/> */}
     </>
   );
 }

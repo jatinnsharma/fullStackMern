@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { data } from "../../data/data";
 import Card from "./Card";
 
@@ -18,6 +18,21 @@ const Cards = () => {
     // setSelectedCategory(category);
   };
   const [searchTerm, setSearchTerm] = useState("");
+
+
+const [restaurants,setRestaurants] = useState([]);
+
+ useEffect(()=>{
+  getRestaurant();
+ },[restaurants]);
+
+async function  getRestaurant(){
+  const data = await fetch('https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.9351929&lng=77.62448069999999&page_type=DESKTOP_WEB_LISTING')
+  const json = await data.json();
+  setRestaurants(json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants)
+  console.log(json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants)
+ }
+
 
   return (
     <>
@@ -78,7 +93,7 @@ const Cards = () => {
           marginTop: "30px",
         }}
       >
-        {filteredFoods
+        {/* {filteredFoods
           .filter((val) => {
             if (searchTerm === " ") {
               // all show
@@ -89,9 +104,10 @@ const Cards = () => {
               // filter data
               return val;
             }
-          })
-          .map((items) => {
-            return <Card data={items} key={items.id} />;
+          }) */}
+          {
+          restaurants.map((items) => {
+            return <Card data={items} key={restaurants.id} />;
           })}
       </div>
     </>
