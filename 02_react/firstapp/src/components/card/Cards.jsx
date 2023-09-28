@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { data } from "../../data/data";
 import Card from "./Card";
+import Shimmer from "../../shimmer/Shimmer";
 
 const Cards = () => {
   const [filteredFoods, setFilteredFoods] = useState(data);
@@ -20,21 +21,20 @@ const Cards = () => {
   const [searchTerm, setSearchTerm] = useState("");
 
 
-const [restaurants,setRestaurants] = useState([]);
+const [restaurants,setRestaurants] = useState(null);
 
  useEffect(()=>{
   getRestaurant();
- },[restaurants]);
+ },[]);
 
 async function  getRestaurant(){
   const data = await fetch('https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.9351929&lng=77.62448069999999&page_type=DESKTOP_WEB_LISTING')
   const json = await data.json();
   setRestaurants(json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants)
-  console.log(json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants)
  }
 
-
-  return (
+  
+  return !restaurants ? (<Shimmer/>) : (
     <>
       <div
         style={{ width: "90vw", margin: "auto" }}
