@@ -16,7 +16,7 @@ console.log(name)
         }else if(inputName === "email"){
             setEmail(inputValue);
         }else if(inputName === "phone"){
-            setPhone(inputValue);
+            setPhone(inputValue)
         }
     }
     

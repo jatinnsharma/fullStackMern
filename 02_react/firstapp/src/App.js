@@ -4,6 +4,14 @@ import ProductDetails from "./pages/ProductDetails";
 // import UseState from "./Hooks/useState/Index";
 // import BgColorChange from "./Hooks/useState/bgColor";
 import Header from "./components/Header/Header";
+import Context from "./Hooks/useContext/Context";
+import Login from "./pages/Login";
+import ApiContext from "./Hooks/useContext/apiFetch/ApiContext";
+import Forms from "./forms/Forms";
+import Reducer from "./Hooks/useReducer/Reducer";
+import { MyContextProvider } from "./addToCard/MyContext";
+import YourComponent from "./addToCard/YourComponents";
+import Alert from "./tasks/alert/Alert";
 // import UseState from "./Hooks/useState/Index";
 // import BgColorChange from "./Hooks/useState/bgColor";
 // import Clock from "./Hooks/useState/clock/Index";
@@ -12,16 +20,35 @@ import Header from "./components/Header/Header";
 function App() {
   return (
     <>
-    <Header/>
+    {/* <Header/>
       <Routes>
         <Route path="/" element={<Cards/>}/>
         <Route path="product-details/:id" element={<ProductDetails/>}/>
-      </Routes> 
+      </Routes>  */}
       {/* <UseState/> */}
 
      {/* <BgColorChange/> */}
 
      {/* <Clock/> */}
+
+     {/* <Context/> */}
+      {/* <Login/> */}
+      {/* <ApiContext/> */}
+      {/* <Forms/> */}
+      {/* <Reducer/> */}
+
+
+
+    {/* <MyContextProvider>
+      <div className="App">
+        <YourComponent />
+      </div>
+    </MyContextProvider> */}
+
+
+
+    <Alert/>
+
     </>
   );
 }
