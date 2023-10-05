@@ -12,6 +12,7 @@ import Reducer from "./Hooks/useReducer/Reducer";
 import { MyContextProvider } from "./addToCard/MyContext";
 import YourComponent from "./addToCard/YourComponents";
 import Alert from "./tasks/alert/Alert";
+import MainComponent from "./redux/MainComponent";
 // import UseState from "./Hooks/useState/Index";
 // import BgColorChange from "./Hooks/useState/bgColor";
 // import Clock from "./Hooks/useState/clock/Index";
@@ -47,7 +48,9 @@ function App() {
 
 
 
-    <Alert/>
+    {/* <Alert/>*/}
+
+    <MainComponent/>
 
     </>
   );
