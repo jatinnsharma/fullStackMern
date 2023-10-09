@@ -9,13 +9,17 @@ import Login from "./pages/Login";
 import ApiContext from "./Hooks/useContext/apiFetch/ApiContext";
 import Forms from "./forms/Forms";
 import Reducer from "./Hooks/useReducer/Reducer";
-import { MyContextProvider } from "./addToCard/MyContext";
-import YourComponent from "./addToCard/YourComponents";
+import { MyContextProvider } from "./addTOList/MyContext";
+import YourComponent from "./addTOList/YourComponents";
 import Alert from "./tasks/alert/Alert";
 import MainComponent from "./redux/MainComponent";
 // import UseState from "./Hooks/useState/Index";
 // import BgColorChange from "./Hooks/useState/bgColor";
 // import Clock from "./Hooks/useState/clock/Index";
+import AddToCard from './ReduxAddTOCart/Index'
+import Index from "./ReduxAddTOCart/Index";
+import ContextApiIndex from "./contextApi/Index";
+
 
 
 function App() {
@@ -50,8 +54,12 @@ function App() {
 
     {/* <Alert/>*/}
 
-    <MainComponent/>
+    {/* <MainComponent/> */}
 
+    <AddToCard/>
+
+    
+    {/* <ContextApiIndex/> */}
     </>
   );
 }
