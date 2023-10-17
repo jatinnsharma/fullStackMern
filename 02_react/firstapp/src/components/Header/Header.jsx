@@ -2,11 +2,13 @@ import React from 'react'
 
 const Header = () => {
   return (
-    <div className='d-flex justify-content-between px-5 bg-black text-white'>
+    <div className='d-flex justify-content-between items-center p-3 bg-black text-white'>
       <h1>Food App</h1>
-      <div className='d-flex gap-2 mt-3'>
-        Cart
-        <p>0</p>
+      <div className='flex gap-2 items-center'>
+        <li>About</li>
+        <li>contact</li>
+        <li>Home</li>
+        <li>Cart</li>
       </div>
       </div>
   )

@@ -49,7 +49,7 @@ const ProductsList =  () => {
 
         <div className='flex gap-4'>
         <button onClick={()=>{filterProducts('all')}} className='btn btn-danger'>All</button>
-        <button onClick={()=>{filterProducts("men's clothing")}} className='btn btn-danger'>Men's</button>
+        <button onClick={()=>{filterProducts("men's clothing")}} className='btn btn-danger'>Men's best</button>
         <button onClick={()=>{filterProducts("women's clothing")}} className='btn btn-danger'>Woman's</button>
         <button onClick={()=>{filterProducts('jewelery"')}} className='btn btn-danger'>Jewelery</button>
         <button onClick={()=>{filterProducts('electronics')}} className='btn btn-danger'>Electronics</button>

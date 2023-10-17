@@ -1,7 +1,7 @@
 
 const Header = () => {
     return (
-      <div className="flex bg-blue-600 h-18 pt-3 font-medium  ">
+      <div className="flex bg-blue-600 h-18 pt-3 font-medium ">
           <div className="text-white text-2xl italic ml-32 ">Flipkart</div>
           <div>
 

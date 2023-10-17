@@ -19,17 +19,18 @@ import MainComponent from "./redux/MainComponent";
 import AddToCard from './ReduxAddTOCart/Index'
 import Index from "./ReduxAddTOCart/Index";
 import ContextApiIndex from "./contextApi/Index";
+import CartPage from "./ReduxAddTOCart/CartPage";
 
 
 
 function App() {
   return (
     <>
-    {/* <Header/>
+    <Header/>
       <Routes>
         <Route path="/" element={<Cards/>}/>
         <Route path="product-details/:id" element={<ProductDetails/>}/>
-      </Routes>  */}
+      </Routes> 
       {/* <UseState/> */}
 
      {/* <BgColorChange/> */}
@@ -56,7 +57,13 @@ function App() {
 
     {/* <MainComponent/> */}
 
-    <AddToCard/>
+    {/* <Routes>
+      <Route path="/" element={<AddToCard/>}/>
+      <Route path="/cart" element={<CartPage/>}/>
+    </Routes> */}
+    
+
+    
 
     
     {/* <ContextApiIndex/> */}
