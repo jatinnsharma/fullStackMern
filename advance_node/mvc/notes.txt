@@ -1,0 +1,61 @@
+view->controller->model 
+
+service->repository->model
+service->helpers
+
+service 
+
+repository
+interaction with db happens with repository
+how to connect with db
+fetch some entity
+create some entity
+
+
+in model ,we decide how data is looked inside the database like.
+
+
+
+------------------------
+overall +
+when the user interact , it will interact with controllers 
+and then controller forward the request to the service. 
+where we have the bussiness logic 
+suppose you wants to  fetch 3rd party api and some doing some processing
+service layer call the resposity layer
+resposity layer only job to interact with database
+how the database look like it will decided into the model
+
+
+
+---------------------------
+how to setup the folder 
+
+1) Task based 
+controller -> services -> model - user | movie 
+
+
+
+2) features based 
+user - controller ,serices, model  
+model - controller ,serices, model  
+
+
+every features and their own mvc 
+
+-----------------------------------
+Express JS Middleware 
+ 
+
+api -> routes 
+
+user call the api which check routes is call 
+
+app.get('/home',m1,m2,(req,res)=>{
+service
+})
+
+m1,m2 -> middleware 
+(req,res)=>({
+    service
+}) -> controller 
