@@ -141,8 +141,6 @@ Get Details about a table and its attributes
 
 
 
-
-
  INSERT Data in a table 
  ------------------------
  INSERT INTO <NANE>(NAME,CHARGES,GENDER) VALUES(val 1, val 2, val 3)
@@ -199,8 +197,55 @@ Combaing Queries
     Select * from actors where NOT(changes>= 3000000 AND Id < 4)
     
 
+Sort the data
 --------------------------------
-    SELECT * from actores order by Charges DESC, Name DESC LIMIT 2 OFFSET 0;
+    SELECT * from actores order by Charges DESC, Name; // name will be asc  
+    SELECT * from actores order by Charges DESC, Name DESC 
+
+
+Get limited number of data
+----------------------
+    SELECT * from actores order by Charges DESC, Name DESC LIMIT 2;
     Limit -> show 2 recordes
-    OFFSET 0-> start from 0 - show first page
+
+
+
+Define the starting pointing from which we have to fetch the data. 
+-----------------------------
+    SELECT * from actores order by Charges DESC, Name DESC LIMIT 2 OFFSET 1;
+
+LIMIT 2 OFFSET 0;
+    OFFSET 0 -> start from 0 - show first page
     OFFSET 1 -> move to next recordes
+
+
+
+
+Update a row 
+----------------------------------------
+    UPDATE Actors Set Name = "Chris Evans" Where Name = "Chris Evass" 
+
+
+
+Make changes to structure of a table 
+-----------------------------------
+    ALTER ->   Modify, ADD ,REMOVE , COLUMNS 
+    ALTER TABLE actors ADD dob
+    ALTER TABLE actors DROP dob
+
+
+
+
+-------------------------------------
+ORM  -> object relational mapper 
+What is ORM 
+librares that help you to actually do database queres but instead write sql 
+system, you write object oriented system 
+ORM is only for RDBMS ONLY. 
+
+------------------------------
+
+Sequelize.
+hibernate ORM -> is used for spring boot
+-----------------
+  
