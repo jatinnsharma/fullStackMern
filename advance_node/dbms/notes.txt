@@ -1,0 +1,206 @@
+Database 
+-----------
+
+Q). what used to happen before ? 
+Ans -> file based system
+1) Data Redundancy 
+2) Data inconsistency
+3) Difficult data access 
+4) Security 
+
+
+Database : It is a collection of data. 
+DBMS -> Database Management System.
+DBMS -> They help us to create,fetch and maintain data in the database.
+
+DBMS solve problem : 
+1) Control Data Redundancy   -> Normalization 
+2) It helps us to put constraints -> 
+3) Restriction of unauthorinaed 
+4) Easy Backup & recovery 
+
+
+Q) RDBMS - > relational database management system 
+which maintains data in the form of tables
+MySQL , PgSQL,Oracle SQL,Sqlite etc 
+SQL standards -> SQL-> Structure query language.
+SQL -> declarative programming 
+In declarative langauge , just tell the task , not tel write logic 
+
+
+
+We are going to mysql 
+MySQL is RDBMS 
+Simple ,store data in the form of tables 
+case insensitive  -> SHOW DATABASE or show database is same 
+; -> mandory 
+
+
+
+
+My Sql queries 
+------------------
+- List all database 
+    -> show database; 
+
+- Create a new database
+    -> CREATE DATABASE <name of the database>;
+    // Example 
+    // CREATE DATABASE Blogging;
+
+- Start working on a database 
+    USE <name of the db>;
+    // Example 
+    USE Blogging; 
+
+- Delete the whole database 
+    DROP <name of the db>;
+    // Example 
+    DROP Blogging;
+
+
+
+MY SQL database store data in the form table 
+---------------------------------------
+- List all the tables of a database 
+    -> SHOW TABLES;
+    // Example 
+    SHOW DATABASE 
+    list of database - select any one 
+    USE Blogging 
+    SHOW TABLES 
+    
+- Create a table 
+
+    CREATE TABLE <table name>(attribute name    attribute type      extra properties for the attribute )
+
+    CREATE TABLE Blogs ( 
+        title VARCHAR(30)
+        id int 
+        content
+    )
+
+    C++.JS -> strings  -> in mysql VARCHAR(30)
+
+    CREATE TABLE Blogs(int INT , title VARCHAR(20),content VARCHAR(1200))
+
+    CREATE TABLE Actors (
+        Name Varchar(20),
+        Gender ENUM("MALE","Female","Transgender"),
+        Charges Decimal;
+    )
+
+    // better aproved
+    CREATE TABLE Actors (
+        Name Varchar(20) NOT NULL,
+        Gender ENUM("MALE","Female","Transgender") NOT NULL,
+        Id INT AUTO_INCREMENT,
+        PRIMARY KEY(Id);
+        Charges Decimal;
+    )
+
+    
+    CREATE TABLE IF NOT EXITS Actors (
+        Name Varchar(20) NOT NULL,
+        Gender ENUM("MALE","Female","Transgender") NOT NULL,
+        Id INT AUTO_INCREMENT,
+        PRIMARY KEY(Id);
+        Charges Decimal;
+    )
+    
+    SHOW TABLES;    
+
+    desc ACTORS
+
+    PRIMARY key is describe as a unique key  
+
+Drop a Table
+-------------
+    DROP TABLE <name of the db>;
+    // Example 
+    DROP TABLE Blogging;
+
+
+
+various data store 
+------------------------
+- Numeric -> INT,DECIMAL,BIGINT etc 
+- String -> CHAR,VARCHAR,enum etc
+- Date Time -> DATE,TIME,DATETIME. 
+- you can also store JSON into database.
+
+
+Get Details about a table and its attributes
+-------------------------------------------
+    ->DESCRIBE <NAME>
+    ->DESC <NAME>
+
+    // Example : 
+    DESC Actors 
+    DESCRIBE Actors
+
+
+
+
+
+ INSERT Data in a table 
+ ------------------------
+ INSERT INTO <NANE>(NAME,CHARGES,GENDER) VALUES(val 1, val 2, val 3)
+
+Example: 
+----------
+    Single entry
+    -------------
+    INSERT INTO ACTORS(NAME,CHARGES,GENDER) VALUES ("Johnny Depp","20000","Male");
+
+    Mutliply entries
+    -----------------
+    INSERT INTO ACTORS(NAME,CHARGES,GENDER) VALUES ("Johnny Depp","20000","Male"),("jatin sharma","2000000","MALE");
+
+
+Retrieve everything from the table 
+
+    SELECT <attribute> ,<attribute2> FROM <Name of the TABLE>
+
+    FOR GETTING ALL THE ATTRIBTUES 
+    SELECT * FROM <NAME OF THE TABLE>;
+
+
+Where Clause 
+-------------
+    select * from actors WHERE Charges >= 3000000;
+
+
+Operators 
+---------------
+>, < , >= , <= ,!= ,<> ,(not equals) , = (equals) ,IN ,etc.
+
+
+Like 
+------
+SELECT Col1, Col2, ... FROM Table WHERE Column1 like %string%;
+
+   // Ex
+   select * from actors where Name Like "Chris%" // prefix match 
+    // here it denotes prefix matching i.e. get me all the rows where 
+    // the name starts from Chris and after that it can have anythings 
+
+   select * from actors where Name Like "%depp" // suffix match
+    // here it denotes suffix matching i.e. get all the rows where 
+    // the name starts from anything but it alawys end with depp;
+
+    select * from actors where Name Like "%S%"; // substring match 
+
+
+Combaing Queries 
+------------------
+    Select * from actors where changes>= 3000000 AND Id < 4
+
+    Select * from actors where NOT(changes>= 3000000 AND Id < 4)
+    
+
+--------------------------------
+    SELECT * from actores order by Charges DESC, Name DESC LIMIT 2 OFFSET 0;
+    Limit -> show 2 recordes
+    OFFSET 0-> start from 0 - show first page
+    OFFSET 1 -> move to next recordes
