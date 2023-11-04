@@ -6,4 +6,4 @@
 
 - `git add <filename>` -> starts tracking your new changes for the next commit
 
--`git commit -m "<message>" ` -> this creates a new version based on your prev changes
+- `git commit -m "<message>" ` -> this creates a new version based on your prev changes

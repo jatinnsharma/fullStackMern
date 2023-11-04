@@ -1,13 +1,15 @@
 const express = require('express')
-const path = require('path')
 const app = express()
+
+const path = require('path')
 require('dotenv').config()
 
 const loginPage = path.join(__dirname+'/index.html')
 const header = path.join(__dirname,'header')
-const PORT = process.env.PORT || 8080
+const PORT = process.env.PORT || process.env.PORT2
 
-app.get('',(req,res)=>{
+
+app.get('/',(req,res)=>{
 res.sendFile(`${header}/Header.html`)
 })
 app.get('/about',(req,res)=>{
@@ -21,3 +23,5 @@ app.get('/about',(req,res)=>{
  app.listen(PORT,()=>{
     console.log(`Server is running on PORT ${PORT}`)
  });
+
+
