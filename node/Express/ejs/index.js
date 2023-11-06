@@ -1,6 +1,6 @@
 const express = require('express')
 const app = express()
-const PORT = 8080
+const PORT = 8081
 
 const data= [{id:1,name:"Jatin",email:'jatinsharma22@gmail.com',phone:909090909}]
 
@@ -32,6 +32,28 @@ app.post('/delete/:id', (req, res) => {
     }
     res.redirect('/');
 });
+
+app.get('/edit/:id', (req, res) => {
+    const idToEdit = parseInt(req.params.id);
+    const employeeToEdit = data.find(employee => employee.id === idToEdit);
+    res.render('edit', { employeeToEdit });
+});
+
+app.post('/update/:id', (req, res) => {
+    const idToUpdate = parseInt(req.params.id);
+    const name = req.body.name;
+    const email = req.body.email;
+    const phone = req.body.phoneNumber;
+    const employeeToUpdate = data.find(employee => employee.id === idToUpdate);
+    if (employeeToUpdate) {
+        employeeToUpdate.name = name;
+        employeeToUpdate.email = email;
+        employeeToUpdate.phone = phone;
+    }
+    res.redirect('/');
+});
+
+
 app.listen(PORT,()=>{
     console.log(`Server is running on ${PORT}`)
 })

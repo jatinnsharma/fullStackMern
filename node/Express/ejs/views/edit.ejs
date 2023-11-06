@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Employee</title>
+    <style>
+                body{
+            background-color: #F0EEED;
+            font-family: sans-serif;
+        }
+        input{
+        border: none;
+        width: 20vw;
+        border-bottom: 1px solid #233142;
+        padding: 4px;
+        margin:40px 5px 0px;
+        outline: none;
+        background-color: #F0EEED;
+      }
+      button{
+        padding: 5px 10px;
+        background-color: #233142;
+        border: none;
+        color: white;
+        cursor: pointer;
+      }
+      .btn:hover{
+        background-color: #61677A;
+        transform: scale(1.01);
+      }
+    </style>
+</head>
+<body>
+    <h1>Edit Employee</h1>
+    <form action="/update/<%= employeeToEdit.id %>" method="POST">
+    <input type="text" name="name" placeholder="Enter name">
+    <input type="text" name="email" placeholder="Enter email">
+    <input type="text" name="phoneNumber" placeholder="Enter phone number">
+    <button class="btn" type="submit">Add</button>
+    </form>
+</body>
+</html>

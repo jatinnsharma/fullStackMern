@@ -1,43 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h1>Employee Detials</h1>
-    <table>
-        <thead>
-            <tr>
-                <th>ID</th>
-                <th>Name</th>
-                <th>email</th>
-                <th>phone number</th>
-            </tr>
-        </thead>
-        <tbody>
-                <% data.forEach(function(employee) { %>
-                    <tr>
-                    <td><%= employee.id %></td>
-                    <td><%= employee.name %></td>
-                    <td><%= employee.email %></td>
-                    <td><%= employee.phone %></td>
-                    <td>
-                        <form action="/delete/<%= employee.id %>" method="post" style="display: inline;">
-                            <button type="submit">Delete</button>
-                        </form>
-                    </td>
-                </tr>
-                <% }); %>
-        </tbody>
-    </table>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Table Employee</title>
+    <style>
 
+        body{
+            background-color: #F0EEED;
+            font-family: sans-serif;
+        }
+      th,
+      td {
+        padding: 20px;
+        text-align: left;
+        border: 1px solid #ddd;
+        width: 100vw;
+      }
+      th {
+        background-color: #000000;
+        color: white;
+      }
+      tr:hover {
+        background-color: #537FE7;
+      }
+      button{
+        padding: 5px 10px;
+        background-color: #233142;
+        border: none;
+        color: white;
+        cursor: pointer;
+      }
+      .btn1:hover{
+        background-color: #61677A;
+        transform: scale(1.01);
+      }
+      .btn2:hover{
+        background-color: #61677A;
+        transform: scale(1.01);
+      }
+      .btn3:hover{
+        background-color: #61677A;
+        transform: scale(1.01);
+      }
+      input{
+        border: none;
+        width: 20vw;
+        border-bottom: 1px solid #233142;
+        padding: 4px;
+        margin:40px 5px 0px;
+        outline: none;
+        background-color: #F0EEED;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Employee Details</h1>
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>email</th>
+          <th>phone number</th>
+          <th>Operation</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% data.forEach(function(employee) { %>
+        <tr>
+          <td><%= employee.id %></td>
+          <td><%= employee.name %></td>
+          <td><%= employee.email %></td>
+          <td><%= employee.phone %></td>
+          <td>
+            <form
+              action="/delete/<%= employee.id %>"
+              method="post"
+              style="display: inline"
+            >
+              <button class="btn3" type="submit">Delete</button>
+            </form>
+            <a href="/edit/<%= employee.id %>">
+                <button class="btn2">Edit</button>
+                </a>
+          </td>
+        </tr>
+        <% }); %>
+      </tbody>
+    </table>
+    <h2>Number of Employee : <%= data.length %></h2>
+
+
+   <center>
+     <h2>Enter Employee details</h2>
     <form action="/data" method="post">
-    <input type="text" name="name" placeholder="Enter name">
-    <input type="text" name="email" placeholder="Enter email">
-    <input type="text" name="phoneNumber" placeholder="Enter phone number">
-    <button type="submit">Add</button>
+      <input type="text" name="name" placeholder="Enter name" />
+      <input type="text" name="email" placeholder="Enter email" />
+      <input type="text" name="phoneNumber" placeholder="Enter phone number" />
+      <button type="submit" class="btn1">Add</button>
     </form>
-</body>
+</center>
+  </body>
 </html>
