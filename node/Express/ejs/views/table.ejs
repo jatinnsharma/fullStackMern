@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Employee Detials</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>email</th>
+                <th>phone number</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><%= EmployeeData.id %></tr>
+            <tr><%= EmployeeData.name %></tr>
+            <tr><%= EmployeeData.email %></tr>
+            <tr><%= EmployeeData.phoneNumber %></tr>
+        </tbody>
+    </table>
+
+    <form action="/data" method="post">
+    <input type="text" name="name" placeholder="Enter name">
+    <input type="text" name="email" placeholder="Enter email">
+    <input type="text" name="phoneNumber" placeholder="Enter phone number">
+    <button type="submit">Add</button>
+    </form>
+</body>
+</html>
