@@ -17,10 +17,19 @@
             </tr>
         </thead>
         <tbody>
-            <tr><%= EmployeeData.id %></tr>
-            <tr><%= EmployeeData.name %></tr>
-            <tr><%= EmployeeData.email %></tr>
-            <tr><%= EmployeeData.phoneNumber %></tr>
+                <% data.forEach(function(employee) { %>
+                    <tr>
+                    <td><%= employee.id %></td>
+                    <td><%= employee.name %></td>
+                    <td><%= employee.email %></td>
+                    <td><%= employee.phone %></td>
+                    <td>
+                        <form action="/delete/<%= employee.id %>" method="post" style="display: inline;">
+                            <button type="submit">Delete</button>
+                        </form>
+                    </td>
+                </tr>
+                <% }); %>
         </tbody>
     </table>
 
