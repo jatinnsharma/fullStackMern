@@ -1,0 +1,62 @@
+Session 1
+===========
+What is a database - a collection of data and holds data in the form of
+tables.
+
+what is a table - holds the data in form of row and columns.
+
+It is similar to excel spreadsheet 
+
+The database provides us the capability to access and manipulate this data.
+
+
+2 types of databases 
+=====================
+
+1. Relational Database - rows & columns and also the tables have relation between them.
+MySQL
+SQL server 
+SQLite 
+MariaDB 
+
+2. NOSQL Database - key value , Document , Graph 
+
+Hbase 
+MongoDb 
+cassandra 
+
+
+
+SQL - Structured Query Language 
+====
+
+Installation - goormIDE
+
+command for running mysql :  mysql-ctl cli 
+- show databases;
+- CREATE DATABASE jatin; 
+- USE Jatin;
+- SELECT database();
+- CREATE TABLE employee 
+(
+name varchar(50),
+age INT,
+salary INT 
+);
+- show tables;
+- descible employee || desc employee;
+- drop table employee; 
+- show tables;
+- CREATE TABLE jatin.employee 
+(
+name varchar(50),
+age INT,
+salary INT 
+)
+
+
+
+datatype in sql 
+==================
+int for numeric 
+varchar for string (upto 255 character)
