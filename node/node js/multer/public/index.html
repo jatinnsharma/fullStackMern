@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Picture Upload</title>
+</head>
+<body>
+    <h1>Profile Picture Upload</h1>
+    <form id="uploadForm" action="/upload" method="post" enctype="multipart/form-data">
+        <label for="profileImage">Choose a profile picture:</label>
+        <input type="file" name="profileImage" id="profileImage" accept="image/*">
+        <br>
+        <button type="submit">Upload</button>
+    </form>
+    
+    <div id="profileImageContainer" style="display:none;">
+        <h2>Uploaded Profile Picture</h2>
+        <img id="uploadedProfileImage" src="" alt="Profile Picture">
+    </div>
+
+    <script>
+        function showUploadedProfilePicture(url) {
+            document.getElementById('uploadedProfileImage').src = url;
+            document.getElementById('profileImageContainer').style.display = 'block';
+        }
+    </script>
+</body>
+</html>
